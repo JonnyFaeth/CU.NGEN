@@ -2,13 +2,19 @@
 
 CU.NGEN is CU's public workspace for designing affordable, reproducible systems around the job a person needs done.
 
+## Try Lantern Studio
+
+[Download the latest Lantern Studio release](https://github.com/JonnyFaeth/CU.NGEN/releases/tag/lantern-v0.2.0) or open [app/index.html](app/index.html) locally after downloading the repository. No installation, account or API key is needed. [App guide](app/README.md).
+
+The first working app offers guided photo measurement, an orthogonal lantern-surround generator, sourced material prices, cut lists and illustrated assembly booklets. It is a prototype design tool: photos need ruler confirmation, quotes need checkout verification, and physical lamp safety is not certified.
+
 Founded by **Jonathan D Faeth**, it brings together these project tracks:
 
 | Project | Focus | Current status |
 | --- | --- | --- |
 | [CU Homie](projects/cu-homie/README.md) | A CU product track to be defined from its existing work | Scope and implementation inventory pending |
 | [CU LeRobot](projects/cu-lerobot/README.md) | An affordable desktop cleaning robot designed for integration with Hugging Face LeRobot | Requirements and feasibility planning |
-| [CU paper lamps](projects/cu-lamps/README.md) | Orthogonal Japanese-inspired paper lamps with reproducible build geometry | Geometry generator and calculated example; physical validation pending |
+| [CU paper lamps](projects/cu-lamps/README.md) | Orthogonal Japanese-inspired paper lamps with reproducible build geometry | Offline Lantern Studio app and separate first-build plan; physical validation pending |
 
 **Current status: design and prototype software.** The paper-lamp track includes a working geometry and material estimator. The repository does not yet contain a physically validated lamp or robot, a validated purchasing recommendation, or a product available to order.
 

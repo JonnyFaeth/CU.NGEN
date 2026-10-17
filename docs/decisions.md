@@ -1,5 +1,14 @@
 # Decision record
 
+## 2026-10-17 — Downloadable Lantern Studio
+
+- User authorized independent development and GitHub publication of a downloadable scan-to-lantern app. No purchases or paid API usage are required for this release.
+- Implement guided 2D photo measurement with ruler confirmation instead of claiming automatic 3D scanning.
+- Add a separate freestanding surround family: original tabletop light on its own base, open top/bottom, no attachment to the original fixture. Do not confuse its cut lists with Prototype 01's integrated base.
+- Use deterministic geometry, actual supplier links and dated catalog prices. Unknown delivered costs remain unknown; unavailable listings are labeled.
+- Provide JSON projects, SVG drawings, CSV parts lists and original illustrated HTML/print booklets. No user photos leave the device.
+- Physical and thermal approval cannot be granted by the software. Product release remains a prototype, with explicit evaluation requirements.
+
 ## 2026-10-17 — Prototype procurement and publication
 
 - Select half-inch poplar stock, laminated precut birch plywood plaques, 45 g/m² off-white kozo paper, Titebond Original butt joints, Y7 paper paste and a complete GE battery puck for the first lamp prototype.

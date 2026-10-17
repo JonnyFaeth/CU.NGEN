@@ -1,0 +1,34 @@
+CU.NGEN Lantern Studio 0.2.0
+
+1. Extract the entire ZIP to a folder. Do not run from inside the ZIP preview.
+2. Open index.html in a current Chrome, Edge, Firefox or Safari browser.
+3. Read the prototype scope, choose your light type, and enter measurements.
+4. Optional: open the photo measurement panel, choose a photo, mark two
+   reference endpoints and two opposite corners of the light. A ruler is
+   still required to confirm dimensions. This is NOT automatic 3D scanning.
+5. Choose plain or split frame. Generate the design and review its holds.
+6. Confirm supplier stock and quotes. Enter tools, shipping, tax, cutting
+   and testing costs; blank costs remain unknown, never zero.
+7. Save the project JSON, download the parts CSV and SVG, and use
+   Download assembly booklet (HTML) for illustrated instructions. Open
+   that file in your normal browser and print or save as PDF if desired.
+
+No installation, server, account, paid API or internet is required for design.
+Internet is needed only to visit suppliers or GitHub. Photos stay in memory;
+they are not sent anywhere or saved in the project JSON. Save before closing.
+On phones, local HTML/file handling differs by browser; desktop Chrome/Edge
+is the intended first target. Browser tests used localhost; direct file
+opening could not be automated. The camera/file picker depends on device support.
+
+This version generates an independent tabletop surround with an open top
+and bottom. It does not mount a shade to a bulb, modify wiring, handle hanging
+fixtures, or certify a finished luminaire. Corded lights are mockup-only.
+Hot bulbs and flame are unsupported. Physical joints, stability, material
+temperature limits and safe operating conditions still require validation.
+
+The booklet uses original assembly diagrams, not IKEA material. CU is not
+affiliated with IKEA or any listed supplier. Catalog prices are dated, not
+live delivered quotes. The selected wood listing may be unavailable.
+
+Source, issues and updates: https://github.com/JonnyFaeth/CU.NGEN
+Copyright (c) 2026 Jonathan D Faeth. See LICENSING.md.
