@@ -1,6 +1,6 @@
 # Custom Engine: initial specification
 
-Status: proposed design; no engine implementation yet.
+Status: overall configuration engine proposed. A first deterministic [paper-lamp geometry generator](../projects/cu-lamps/README.md) implements dimension checks, cut planning, material quantities and idealized mass/stability estimates. Procurement selection and physical validation remain pending.
 
 ## Inputs
 

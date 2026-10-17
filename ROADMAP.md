@@ -12,6 +12,18 @@ Milestones describe planned work. Unchecked items are not delivered capabilities
 
 ## 1. Define a feasible desktop robot
 
+The paper-lamp track runs separately from the robot milestones below.
+
+### Paper-lamp prototype
+
+- [x] Implement orthogonal frame geometry, cut lists and material estimates.
+- [x] Reject known geometric incompatibilities and label unvalidated properties.
+- [x] Select actual materials, light source and assembly joints for evaluation (see paper-lamp Prototype 01).
+- [ ] Verify received dimensions, availability, mounting instructions and material operating limits.
+- [ ] Assemble and measure one unlit prototype.
+- [ ] Validate source integration, thermal behavior and stability.
+- [ ] Publish a reproducible, tested build and sourced cost accounting.
+
 - [ ] Measure one representative furniture route: gap width, rise, landing area, edge geometry, and surface material.
 - [ ] Set the prototype budget, size, mass, payload, runtime, and noise limits.
 - [ ] Define the first cleaning task and its success criteria.

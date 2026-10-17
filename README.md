@@ -2,14 +2,15 @@
 
 CU.NGEN is CU's public workspace for designing affordable, reproducible systems around the job a person needs done.
 
-Founded by **Jonathan D Faeth**, it brings together two project tracks:
+Founded by **Jonathan D Faeth**, it brings together these project tracks:
 
 | Project | Focus | Current status |
 | --- | --- | --- |
 | [CU Homie](projects/cu-homie/README.md) | A CU product track to be defined from its existing work | Scope and implementation inventory pending |
 | [CU LeRobot](projects/cu-lerobot/README.md) | An affordable desktop cleaning robot designed for integration with Hugging Face LeRobot | Requirements and feasibility planning |
+| [CU paper lamps](projects/cu-lamps/README.md) | Orthogonal Japanese-inspired paper lamps with reproducible build geometry | Geometry generator and calculated example; physical validation pending |
 
-**Current status: design-stage project.** This repository contains specifications and planning documents, not a working configuration engine, tested robot, validated parts list, or product available to order.
+**Current status: design and prototype software.** The paper-lamp track includes a working geometry and material estimator. The repository does not yet contain a physically validated lamp or robot, a validated purchasing recommendation, or a product available to order.
 
 ## What we are building toward
 

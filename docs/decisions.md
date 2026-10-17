@@ -1,5 +1,20 @@
 # Decision record
 
+## 2026-10-17 — Prototype procurement and publication
+
+- Select half-inch poplar stock, laminated precut birch plywood plaques, 45 g/m² off-white kozo paper, Titebond Original butt joints, Y7 paper paste and a complete GE battery puck for the first lamp prototype.
+- Use the separately documented 7 × 7 × 10 inch frame to fit letter paper and reduce height. Selected components are not yet physically validated.
+- User requested publication of CU.NGEN project work to GitHub. Publish the scoped project source, design records, tests and generated examples; exclude credentials, private data, raw chat and unrelated workspace files. This records project publication intent, not a change to the reminder automation.
+
+## 2026-10-17 — Orthogonal paper-lamp track
+
+- User selected Japanese-style paper lamps as the current engine focus, initially orthogonal and physically buildable.
+- Start with rectangular wood frames and flat paper panels, square cuts and a flat base.
+- Use a deterministic geometry generator before AI-driven shape generation.
+- Produce calculated dimensions and material/stability estimates; label material assumptions and unresolved thermal/structural properties.
+- No complete build is validated until actual parts, joints and a physical prototype provide evidence.
+- Existing CU Homie and CU LeRobot tracks remain intact. No license change or new publication is implied by this implementation.
+
 ## 2026-10-04 — CU.NGEN foundation
 
 - CU.NGEN means Custom Engine and is the umbrella for CU Homie and CU LeRobot.

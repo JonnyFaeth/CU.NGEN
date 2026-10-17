@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "status": "calculated concept; not build-validated",
+  "inputs": {
+    "width_mm": 180,
+    "depth_mm": 180,
+    "height_mm": 280,
+    "section_mm": 12,
+    "base_margin_mm": 10,
+    "base_thickness_mm": 12,
+    "paper_overlap_mm": 6,
+    "stock_length_mm": 900,
+    "kerf_mm": 3,
+    "paper_sheet_width_mm": 300,
+    "paper_sheet_height_mm": 450,
+    "wood_density_kg_m3": 450,
+    "base_density_kg_m3": 650,
+    "paper_g_m2": 40,
+    "source_width_mm": 60,
+    "source_depth_mm": 60,
+    "source_height_mm": 40,
+    "source_mass_kg": 0.1,
+    "source_cg_above_base_mm": 20,
+    "design_clearance_mm": 30,
+    "dimensional_allowance_mm": 1
+  },
+  "overall_mm": [
+    200,
+    200,
+    292
+  ],
+  "frame_cut_list": [
+    {
+      "part": "post",
+      "quantity": 4,
+      "length_mm": 280,
+      "section_mm": [
+        12,
+        12
+      ]
+    },
+    {
+      "part": "width rail",
+      "quantity": 4,
+      "length_mm": 156,
+      "section_mm": [
+        12,
+        12
+      ]
+    },
+    {
+      "part": "depth rail",
+      "quantity": 4,
+      "length_mm": 156,
+      "section_mm": [
+        12,
+        12
+      ]
+    }
+  ],
+  "base_mm": [
+    200,
+    200,
+    12
+  ],
+  "stock_bars": [
+    {
+      "pieces": [
+        {
+          "part": "post",
+          "length_mm": 280
+        },
+        {
+          "part": "post",
+          "length_mm": 280
+        },
+        {
+          "part": "post",
+          "length_mm": 280
+        }
+      ],
+      "remaining_mm": 51
+    },
+    {
+      "pieces": [
+        {
+          "part": "post",
+          "length_mm": 280
+        },
+        {
+          "part": "width rail",
+          "length_mm": 156
+        },
+        {
+          "part": "width rail",
+          "length_mm": 156
+        },
+        {
+          "part": "width rail",
+          "length_mm": 156
+        }
+      ],
+      "remaining_mm": 140
+    },
+    {
+      "pieces": [
+        {
+          "part": "width rail",
+          "length_mm": 156
+        },
+        {
+          "part": "depth rail",
+          "length_mm": 156
+        },
+        {
+          "part": "depth rail",
+          "length_mm": 156
+        },
+        {
+          "part": "depth rail",
+          "length_mm": 156
+        },
+        {
+          "part": "depth rail",
+          "length_mm": 156
+        }
+      ],
+      "remaining_mm": 105
+    }
+  ],
+  "paper_panels": [
+    {
+      "face": "front/back",
+      "quantity": 2,
+      "width_mm": 168,
+      "height_mm": 268
+    },
+    {
+      "face": "left/right",
+      "quantity": 2,
+      "width_mm": 168,
+      "height_mm": 268
+    }
+  ],
+  "paper_sheets_conservative": 4,
+  "paper_area_m2": 0.18009599999999998,
+  "frame_wood_volume_m3": 0.00034099200000000003,
+  "source_clearances_mm": {
+    "x": 47.0,
+    "y": 47.0,
+    "above": 227
+  },
+  "estimated_mass_kg": {
+    "frame": 0.1534464,
+    "base": 0.312,
+    "paper": 0.0072038399999999995,
+    "source": 0.1,
+    "total": 0.5726502400000001
+  },
+  "estimated_center_of_mass_above_table_mm": 51.49886338998128,
+  "ideal_static_tip_angle_deg": 62.75204729017095,
+  "ideal_horizontal_force_at_top_to_tip_N": 1.9232124918136988,
+  "assumptions": [
+    "All dimensions nominal; allowance is an input, not a measured tolerance.",
+    "Symmetric uniform frame, base and paper; source centered and fixed to base.",
+    "Rigid joints, full base footprint contact, level table; no sliding.",
+    "Glue, clips, feet, wiring and finish masses omitted.",
+    "Density and paper weight are supplied estimates, not measured properties.",
+    "Clearance is a requested geometry constraint, not a thermal safety rating.",
+    "Stock length is usable length after damaged ends/squaring; packing is heuristic."
+  ],
+  "unresolved": [
+    "Exact wood, paper, adhesive, joint reinforcement and source product.",
+    "Joint/racking strength, paper sag, humidity response and surface finish.",
+    "Source installation instructions, attachment, cable routing and electrical protection.",
+    "Temperature testing, optical transmission, illuminance and fire performance.",
+    "Measured mass/center of gravity, sliding, tip resistance and assembly trial.",
+    "Procurement availability, tools, delivered cost and independent reproduction."
+  ]
+}
