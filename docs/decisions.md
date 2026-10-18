@@ -39,3 +39,9 @@
 ## Superseded early direction
 
 Earlier notes considered a two-legged walking humanoid and HopeJR as a default architecture. The accepted wheeled desktop-cleaning direction supersedes those requirements. HopeJR remains a research reference, not a selected full-body design.
+# 2026-10-18 — CU mobile quote preview
+
+Target iPhone 16 Pro with a hosted web app; no paid APIs or native App Store distribution. User selected CU kit sales with a 10% fee and then confirmed app/quote flow first because payment and fulfillment are not set up. Orders remain closed; exporting specifications does not submit them. Price details are collapsed, not withheld. Unknown costs are shown explicitly. The fee applies to known kit cost before shipping/tax.
+
+Use openly licensed reference imagery for interface testing, with known synthetic planar geometry for calibration tests. No claim of trained visual intelligence, native LiDAR access, automatic 3D reconstruction or real-world measurement validation. Physical-kit validation remains separate.
+

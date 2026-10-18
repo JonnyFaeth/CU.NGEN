@@ -4,6 +4,10 @@ CU.NGEN is CU's public workspace for designing affordable, reproducible systems 
 
 ## Try Lantern Studio
 
+**Phone edition 0.3:** [mobile app and CU quote-flow source](mobile/README.md). Includes camera/library capture, perspective-reference measurement, three generated design choices, an expandable cost breakdown and a 10% CU fee. Payment and fulfillment are not launched; kit specifications are saved locally, not submitted as orders.
+
+[Hosted phone review](https://cu-ngen-lantern.jbon3.chatgpt.site) (owner-private; sign-in required). [Mobile download](https://github.com/JonnyFaeth/CU.NGEN/releases/tag/mobile-v0.3.0). On iPhone, use the hosted link in Safari and Share → Add to Home Screen. Direct ZIP/HTML opening is not the iPhone installation path.
+
 [Download the latest Lantern Studio release](https://github.com/JonnyFaeth/CU.NGEN/releases/tag/lantern-v0.2.0) or open [app/index.html](app/index.html) locally after downloading the repository. No installation, account or API key is needed. [App guide](app/README.md).
 
 The first working app offers guided photo measurement, an orthogonal lantern-surround generator, sourced material prices, cut lists and illustrated assembly booklets. It is a prototype design tool: photos need ruler confirmation, quotes need checkout verification, and physical lamp safety is not certified.
