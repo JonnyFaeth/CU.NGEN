@@ -1,0 +1,83 @@
+{
+  "moduleSha256": {
+    "../mobile/measurement.js": "40c90c7863eb78c0e036806eb3a117afc611bde6c784f06fc02067c7a14059d3",
+    "../mobile/commerce.js": "1db55d610bcbb543c77fe1af430a853375201f2b5c2d582453f36fdd69060a64",
+    "../app/engine.js": "1646f56db7783b0e19d03aa43d20f741019fc1d682d782a50a2aec82a52f76f5"
+  },
+  "seed": 20261018,
+  "model": "Pinhole camera: focal 900 px, distance 1000 mm, 100 × 100 mm reference; object boxes at +/- half depth. Mark noise uniform +/- specified pixels in 800-wide image coordinates.",
+  "controlsPassed": 60,
+  "overall": {
+    "runs": 5400,
+    "accepted": 5149,
+    "rejected": 251,
+    "within3mm": 31,
+    "within3mmPercentOfAccepted": 0.6,
+    "medianMaxErrorMm": 34.400000000000006,
+    "p95MaxErrorMm": 102.5,
+    "maxErrorMm": 196.5,
+    "generated": 5086,
+    "missesRequestedClearance": 935,
+    "envelopeIntersections": 1
+  },
+  "frontalReferenceAtMidplane": {
+    "runs": 100,
+    "accepted": 100,
+    "rejected": 0,
+    "within3mm": 10,
+    "within3mmPercentOfAccepted": 10,
+    "medianMaxErrorMm": 8.799999999999997,
+    "p95MaxErrorMm": 31.100000000000023,
+    "maxErrorMm": 31.100000000000023,
+    "generated": 100,
+    "missesRequestedClearance": 0,
+    "envelopeIntersections": 0
+  },
+  "byNoise": [
+    {
+      "noise": 0,
+      "runs": 1800,
+      "accepted": 1750,
+      "rejected": 50,
+      "within3mm": 10,
+      "within3mmPercentOfAccepted": 0.57,
+      "medianMaxErrorMm": 31.099999999999994,
+      "p95MaxErrorMm": 101.6,
+      "maxErrorMm": 134.1,
+      "generated": 1730,
+      "missesRequestedClearance": 280,
+      "envelopeIntersections": 0
+    },
+    {
+      "noise": 1,
+      "runs": 1800,
+      "accepted": 1724,
+      "rejected": 76,
+      "within3mm": 14,
+      "within3mmPercentOfAccepted": 0.81,
+      "medianMaxErrorMm": 32.900000000000006,
+      "p95MaxErrorMm": 98.80000000000001,
+      "maxErrorMm": 147.3,
+      "generated": 1706,
+      "missesRequestedClearance": 269,
+      "envelopeIntersections": 0
+    },
+    {
+      "noise": 3,
+      "runs": 1800,
+      "accepted": 1675,
+      "rejected": 125,
+      "within3mm": 7,
+      "within3mmPercentOfAccepted": 0.42,
+      "medianMaxErrorMm": 38.599999999999994,
+      "p95MaxErrorMm": 111.30000000000001,
+      "maxErrorMm": 196.5,
+      "generated": 1650,
+      "missesRequestedClearance": 386,
+      "envelopeIntersections": 1
+    }
+  ],
+  "geometryPassed": 60,
+  "geometryRejectedOrFailed": [],
+  "pricingPassed": 1000
+}
