@@ -7,7 +7,7 @@ function harness(){
  const html=fs.readFileSync(__dirname+'/index.html','utf8');
  for(const m of html.matchAll(/<input\b[^>]*>/g)){const id=m[0].match(/id="([^"]+)"/),v=m[0].match(/value="([^"]*)"/);if(id)el(id[1]).value=v?.[1]||'';}
  el('panelStyle').value='horizontal';el('panelStock').value='square';
- vm.runInNewContext(fs.readFileSync(__dirname+'/panels-ui.js','utf8'),{CUPanels:P,document:{getElementById:el,createElement(){return {click(){downloads.push({name:this.download,blob:blobs.get(this.href)});}};}},window:{addEventListener:(n,f)=>events[n]=f},Blob,TextEncoder,DataView,Uint8Array,Intl,URL:{createObjectURL(b){const u=String(blobs.size);blobs.set(u,b);return u;},revokeObjectURL(){}},setTimeout(){}});
+ vm.runInNewContext(fs.readFileSync(__dirname+'/panels-ui.js','utf8'),{CUPanels:P,CUJourney:require('./journey'),localStorage:{getItem:k=>blobs.get('storage-'+k),setItem:(k,v)=>blobs.set('storage-'+k,v)},document:{getElementById:el,createElement(){return {click(){downloads.push({name:this.download,blob:blobs.get(this.href)});}};}},window:{addEventListener:(n,f)=>events[n]=f},Blob,TextEncoder,DataView,Uint8Array,Intl,URL:{createObjectURL(b){const u=String(blobs.size);blobs.set(u,b);return u;},revokeObjectURL(){}},setTimeout(){}});
  return {el,events,downloads};
 }
 async function exported(h){h.el('panelPackage').onclick();const bytes=Buffer.from(await h.downloads.at(-1).blob.arrayBuffer()),files={};let i=0;
@@ -32,3 +32,12 @@ test('sample exports retain sample label; custom prices and stock propagate to g
  h.el('pc-wood').value='12.34';h.el('pc-wood').input();files=await exported(h);assert.equal(JSON.parse(files['design.json']).quote.lines.find(l=>l.key==='wood').unitPrice,12.34);assert.ok(files['assembly-guide.html'].includes('$24.68'));
 });
 module.exports={harness,exported};
+test('customer chooses, saves, restores and prepares the same design for review',async()=>{
+ const h=harness();h.events['cu-ceiling-capture']({detail:{measurementSource:'user-entered-approximate',fixture:{diameterMm:393.7,projectionMm:228.6}}});
+ h.el('choose-stepped').onclick();assert.equal(h.el('panelStyle').value,'stepped');h.el('saveCeiling').onclick();
+ h.el('choose-plain').onclick();h.el('restoreCeiling').onclick();assert.equal(h.el('panelStyle').value,'stepped');
+ h.el('prepareCeilingReview').onclick();assert.equal(h.downloads.at(-1).name,'CU-design-review.zip');
+ const b=Buffer.from(await h.downloads.at(-1).blob.arrayBuffer());assert.ok(b.includes(Buffer.from('quote-request.json')));assert.ok(b.includes(Buffer.from('draft-review-request')));assert.ok(b.includes(Buffer.from('No paid work authorized')));
+ assert.ok(h.el('ceilingRequestStatus').textContent.includes('not an order'));
+ h.el('panelThickness').value='0';h.el('panelThickness').input();assert.equal(h.el('prepareCeilingReview').onclick,null);
+});

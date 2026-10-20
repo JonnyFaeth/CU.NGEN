@@ -1,4 +1,4 @@
-const CACHE='cu-lantern-0.7.1';const FILES=['./','index.html','mobile.css','mobile.js','engine.js','view.js','measurement.js','commerce.js','kit.js','scan.js','scan-ui.js','panels.js','panels-ui.js','vendor/opencv-4.13.0.js','icon.svg','manifest.webmanifest'];
+const CACHE='cu-lantern-0.8.0';const FILES=['./','index.html','mobile.css','mobile.js','engine.js','view.js','measurement.js','commerce.js','kit.js','scan.js','scan-ui.js','panels.js','panels-ui.js','journey.js','vendor/opencv-4.13.0.js','icon.svg','manifest.webmanifest'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES))));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('cu-lantern-')&&k!==CACHE).map(k=>caches.delete(k))))));
 self.addEventListener('fetch',event=>{if(event.request.method!=='GET')return;const url=new URL(event.request.url);if(url.origin!==self.location.origin)return;const known=FILES.some(p=>new URL(p,self.registration.scope).href===url.href);if(known)event.respondWith(caches.match(event.request).then(hit=>hit||fetch(event.request)));});

@@ -1,5 +1,5 @@
 (function(){'use strict';
-const $=id=>document.getElementById(id),P=CUPanels,fmt=n=>Number(n.toFixed(2)),money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(n);
+const $=id=>document.getElementById(id),P=CUPanels,J=CUJourney,fmt=n=>Number(n.toFixed(2)),money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(n);
 let capture=null,demo=false,current=null;
 const fields={style:'panelStyle',thickness:'panelThickness',clearance:'panelClearance',bottomClearance:'panelBottom',fit:'panelFit',sheetWidth:'panelSheetW',sheetHeight:'panelSheetH'};
 const costNames={wood:'Wood price per selected sheet',paper:'Paper price per 37 inch × 11 ft 9 inch roll',stockTrimming:'Stock trimming to machine size',woodGlue:'Wood adhesive',paperGlue:'Paper adhesive',mounting:'Ceiling attachment',fabrication:'CNC setup, cutting and fit coupon',packaging:'Packaging',handling:'Handling',shipping:'Shipping',tax:'Tax'};
@@ -15,7 +15,7 @@ function zip(files){const enc=new TextEncoder(),chunks=[],central=[];let offset=
 }
 function assembled(d){const F=d.frame,t=d.input.thickness,H=F.wallHeight,b=F.inset,W=F.width;const project=([x,y,z])=>[W*.5+.65*x-.4*y,30+H*.9+.25*(x+y)-.9*z];
  const transforms={E:([x,y])=>[x,y,t],A:([x,y])=>[x,b,t+H-y],B:([x,y])=>[x,W-b-t,t+H-y],C:([x,y])=>[b,b+x,t+H-y],D:([x,y])=>[W-b-t,b+x,t+H-y]};
- const shapes=['B','D','E','C','A'].map(id=>{const p=d.panels.find(p=>p.id===id);const path=[p.outer,...p.slots,...p.windows].map(poly=>'M'+poly.map(a=>project(transforms[id](a)).map(fmt).join(',')).join(' L')+' Z').join(' ');return `<path d="${path}" fill="#c7a775" fill-opacity=".8" fill-rule="evenodd" stroke="#635239" stroke-width="1"/>`;}).join('');
+ const shapes=['B','D','E','C','A'].map(id=>{const p=d.panels.find(p=>p.id===id);const path=[p.outer,...p.slots,...p.windows].map(poly=>'M'+poly.map(a=>project(transforms[id](a)).map(fmt).join(',')).join(' L')+' Z').join(' ');const r=p.paper,paper=[[r.x,r.y],[r.x+r.width,r.y],[r.x+r.width,r.y+r.height],[r.x,r.y+r.height]].map(a=>project(transforms[id](a)).map(fmt).join(',')).join(' ');return `<polygon points="${paper}" fill="#fff4d9" fill-opacity=".85"/><path d="${path}" fill="#c7a775" fill-opacity=".8" fill-rule="evenodd" stroke="#635239" stroke-width="1"/>`;}).join('');
  return `<svg role="img" aria-label="Assembled five-panel enclosure, open top" viewBox="0 0 ${W*1.3} ${H*.9+W*.5+60}" xmlns="http://www.w3.org/2000/svg">${shapes}</svg>`;
 }
 function paperSvg(d){return d.paperRolls.map((s,index)=>`<svg xmlns="http://www.w3.org/2000/svg" width="${s.width}mm" height="${s.height}mm" viewBox="0 0 ${s.width} ${s.height}"><title>Paper roll ${index+1}; rectangles include 6 mm bonding margin per edge</title>${s.items.map(p=>`<rect x="${fmt(p.x)}" y="${fmt(p.y)}" width="${fmt(p.width)}" height="${fmt(p.height)}" fill="none" stroke="black" stroke-width=".2" data-part-id="${p.id}"/>`).join('')}</svg>`);}
@@ -28,10 +28,32 @@ function render(){
  $('panelResult').innerHTML=assembled(d)+`<p>${fmt(d.frame.width)} × ${fmt(d.frame.depth)} × ${fmt(d.frame.height)} mm outside · five panels · open top</p><div class="price">${money(q.knownTotal)}</div><p>Known estimate including ${money(q.cuFee)} CU fee, plus ${q.unknown.length} unquoted items. Not a complete-kit price. Still unknown: ${q.unknown.join(", ")||"supplier verification and physical qualification"}.</p><div class="panel-grid">${d.panels.map(p=>`<article><h3>${p.id} · ${p.name}</h3>${P.svg(p)}<p>${fmt(p.width)} × ${fmt(p.height)} mm</p></article>`).join('')}</div><p>${d.sheets.length} wood sheets · ${d.paperRolls.length} whole paper roll(s) · 5 paper rectangles · ${fmt(d.cutLengthMm/1000)} m panel cut perimeter.</p>`;
  const batch=P.pack(Array.from({length:8},()=>d.paperCutouts).flat(),939.8,3581.4);const allocation=costs().paper==null?'Paper price not entered.':`Eight-kit planning allocation: ${money(batch.length*costs().paper/8)} paper per kit (${batch.length} whole roll(s) shared across eight identical kits). Not deducted from this first-purchase estimate; rejects and shipping excluded.`;
  $('panelCosts').innerHTML='<p>'+allocation+'</p>'+q.lines.map(l=>`<div class="quote-line"><span>${l.quantity} × ${l.label}</span><strong>${money(l.total)}</strong></div>`).join('')+`<div class="quote-line"><span>CU fee</span><strong>${money(q.cuFee)}</strong></div><p>Still to quote: ${q.unknown.join(', ')||'Supplier verification still required'}.</p>`;
+ renderJourney(d,q);
  $('panelDownloads').innerHTML='<button id="panelPackage" class="button">Download five-panel prototype ZIP</button><button id="panelCoupon">Download fit coupon</button><button id="panelGuide">Download assembly guide</button>';
  $('panelPackage').onclick=()=>save(demo?'CU-five-panels-SYNTHETIC.zip':'CU-five-panels.zip','application/zip',zip(files(d,q)));$('panelCoupon').onclick=()=>save('CU-fit-coupon.svg','image/svg+xml',P.coupon(d));$('panelGuide').onclick=()=>save('CU-five-panel-guide.html','text/html',guide(d,q));
- }catch(e){$('panelError').textContent=e.message;$('panelResult').textContent='';$('panelCosts').textContent='';$('panelDownloads').textContent='';}
+ }catch(e){$('ceilingCards').innerHTML='';$('ceilingReviewSummary').textContent='Correct the dimensions before preparing a review.';$('prepareCeilingReview').onclick=null;$('saveCeiling').onclick=null;$('panelError').textContent=e.message;$('panelResult').textContent='';$('panelCosts').textContent='';$('panelDownloads').textContent='';}
 }
+function fixtureReview(){return {shape:'unknown',bulb:'unknown',model:'',wattage:''};}
+function renderJourney(d,q){
+ const variants=J.variants(P,d.input,costs());
+ $('ceilingCards').innerHTML=variants.map(v=>`<article class="ceiling-card ${v.id===d.input.style?'chosen':''}"><h3>${v.name}</h3>${v.design?assembled(v.design):''}<p>${v.description}</p>${v.error?'<p>This pattern needs more space. Adjust dimensions to explore it.</p>':`<p><strong>${money(v.quote.knownTotal)}</strong> known subtotal</p><p class="fine">${fmt(v.design.cutLengthMm/1000)} m panel cut perimeter; cutting cost unquoted</p><button id="choose-${v.id}" aria-pressed="${v.id===d.input.style}">${v.id===d.input.style?'Selected':'Choose '+v.name}</button>`}</article>`).join('');
+ for(const v of variants)if(v.design)$('choose-'+v.id).onclick=()=>{$('panelStyle').value=v.id;render();};
+ $('ceilingReviewSummary').textContent=`${J.styles.find(x=>x.id===d.input.style).name} / ${fmt(d.frame.width)} x ${fmt(d.frame.depth)} x ${fmt(d.frame.height)} mm. ${money(q.knownTotal)} known subtotal including ${money(q.cuFee)} CU fee. ${q.unknown.length} costs remain unquoted. Physical fit and installation remain under review.`;
+ $('prepareCeilingReview').onclick=()=>{
+  const request=J.review(capture,d,q,fixtureReview(),demo),bundle=files(d,q);
+  bundle['quote-request.json']=JSON.stringify(request,null,2);
+  bundle['QUOTE-REQUEST.txt']=`CU KIT REVIEW REQUEST - NOT AN ORDER\nPattern: ${d.input.style}\nFixture envelope: ${d.input.diameter} x ${d.input.projection} mm\nMeasurement source: ${request.measurementSource}\nKnown subtotal: ${money(q.knownTotal)}\nPlease quote one complete kit with fabrication, fitting/attachment review, packing, shipping and lead time. No paid work authorized.\n\nOpen review items:\n${request.openItems.map(x=>'- '+x).join('\n')}\n\nPhotos are not included. This file is downloaded only; it has not been sent to CU or any supplier.`;
+  save('CU-design-review.zip','application/zip',zip(bundle));$('ceilingRequestStatus').textContent='Review package downloaded. It has not been sent and is not an order. Share it with your chosen reviewer; photos are not included.';
+ };
+ $('saveCeiling').onclick=()=>{try{localStorage.setItem('cu-ceiling-project-v1',JSON.stringify(J.project(capture,d,costs(),fixtureReview(),demo)));$('ceilingSaveStatus').textContent='Design saved on this device. Photos are not saved. Private browsing or clearing site data can remove it.';}catch(e){$('ceilingSaveStatus').textContent='Device storage is unavailable. Download the prototype package to keep this design.';}};
+}
+$('restoreCeiling').onclick=()=>{try{
+ const raw=localStorage.getItem('cu-ceiling-project-v1');if(!raw)throw Error('No design saved on this device yet.');
+ const p=J.restore(P,raw);if($('scanReset').onclick)$('scanReset').onclick();capture=p.capture;demo=p.exampleOnly;$('scanUnit').value='mm';$('scanDiameter').value=p.capture.fixture.diameterMm;$('scanProjection').value=p.capture.fixture.projectionMm;$('scanManual').checked=true;$('scanPlanning').checked=p.capture.measurementSource!=='user-entered-physically-confirmed';$('scanConfirmed').checked=!demo&&!$('scanPlanning').checked;if($('scanManual').onchange)$('scanManual').onchange();capture=p.capture;demo=p.exampleOnly;
+ for(const [key,id] of Object.entries(fields))$(id).value=p.input[key];
+ for(const key of Object.keys(costNames))$('pc-'+key).value=p.costs[key]??'';
+ $('panelStock').value=p.costs.stockOption;render();$('ceilingSaveStatus').textContent='Saved design restored. Recheck the measurements and prices before requesting fabrication.';
+ }catch(e){$('ceilingSaveStatus').textContent='Could not restore design: '+e.message;}};
 for(const id of [...Object.values(fields),...Object.keys(costNames).map(k=>'pc-'+k)])$(id).addEventListener('input',()=>{if(['panelSheetW','panelSheetH'].includes(id)){ $('pc-wood').value='';$('panelStock').value='custom';}render();});
 $('panelStock').addEventListener('change',()=>{const v=$('panelStock').value;if(v==='custom'){$('pc-wood').value='';}else{$('panelSheetW').value=604.8248;$('panelSheetH').value=v==='long'?1214.4248:604.8248;$('pc-wood').value=v==='long'?31.99:9.99;}render();});
 window.addEventListener('cu-ceiling-capture',e=>{capture=e.detail;demo=false;render();});
