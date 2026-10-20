@@ -79,3 +79,5 @@ Substantial AI assistance was used to draft this implementation and documentatio
 ## Ceiling lantern reference
 
 [Stepped Shoji design reference](STEPPED-SHOJI.md) records the first actual ceiling fixture and handmade style study. Ceiling mounting is a new, unimplemented product mode; the current freestanding kit does not cover this fixture. Source home media stays local.
+
+[Five-panel ceiling kit specification](FIVE-PANEL-KIT.md): four CNC-cut walls, a bottom panel, paper lining, and a separately specified ceiling attachment. This supersedes stick construction for the planned ceiling product only.

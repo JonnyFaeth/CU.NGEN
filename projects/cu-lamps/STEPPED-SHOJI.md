@@ -24,7 +24,7 @@ Separate `mountingMode` from decorative style. A ceiling-surround mode needs con
 
 For this style, expose rib count, upper-band height, open-band height, step inset, and border width. Derive equal rib spacing from the available panel height and actual strip width; reject nonpositive openings, collisions, and strips longer than purchased stock. Count ribs, borders, paper panels, joints, and mounting components in the bill of materials. Decorative strips must not silently become load-bearing members.
 
-Start with symmetric repeated faces and straight cuts. Keep any complex stepped face as an explicit assembly of straight pieces with documented joints. Preview variants may precede fabrication support, but must be labelled concept-only until the matching assembly and mounting plan exist.
+Updated manufacturing direction: use five CNC-cut sheet-wood panels with integral borders and ribs, rather than assembling the ceiling enclosure from individual sticks. See [five-panel kit specification](FIVE-PANEL-KIT.md). The open underside in the unfinished reference becomes a paper-lined bottom panel. Preview variants remain concept-only until matching fabrication and mounting plans exist.
 
 ## Evidence needed before a fitted kit
 
