@@ -61,4 +61,4 @@ Combine future wood orders only after confirmed demand to spread shipping. Batch
 
 Avoid replacing B/BB with cheaper BB/BB, reducing thickness, rotating only some visible walls, or splitting the bottom just to hit a price. Those require separate appearance and structural evaluation. Procurement approval also does not remove the need to validate the eventual fixture enclosure and ceiling attachment.
 
-The hosted app's provisional prices remain unchanged pending actual stock qualification and fabrication/mount quotes; this package provides an auditable procurement alternative without presenting an unverified complete-kit price.
+The [mobile 0.7 estimate update](../../projects/cu-lamps/MATERIAL-ESTIMATES-0.7.md) incorporates these sourcing candidates with whole-stock pricing and explicit unknowns. Stock qualification and fabrication/mount quotes remain outstanding; no complete-kit price is claimed.

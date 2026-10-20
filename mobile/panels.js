@@ -46,11 +46,11 @@ function sheetSvg(s){return `<svg xmlns="http://www.w3.org/2000/svg" width="${fm
 function coupon(d){const t=d.input.thickness,fit=d.input.fit;const male={id:'coupon-tab',width:40,height:30+t,outer:[[0,0],[40,0],[40,30],[30,30],[30,30+t],[10,30+t],[10,30],[0,30]],slots:[],windows:[]},female={id:'coupon-slot',width:40,height:30,outer:rect(0,0,40,30),slots:[rect(10-fit/2,15-(t+fit)/2,20+fit,t+fit)],windows:[]};return sheetSvg({width:100,height:50,items:[{...male,x:5,y:5},{...female,x:55,y:5}]});}
 function quote(d,c={}){
  const lines=[],unknown=[];function add(key,label,qty,defaultPrice){const v=Object.hasOwn(c,key)?c[key]:defaultPrice;if(v==null||v===''){unknown.push(label);return;}const price=n(v,label,0,100000);lines.push({key,label,quantity:qty,unitPrice:price,total:Math.round(qty*Math.round(price*100))/100});}
- add('wood','Wood stock sheets',d.sheets.length,21.06);add('paper','Kozo paper rolls',d.paperRolls.length,39.99);
- for(const [k,label] of [['woodGlue','Wood adhesive'],['paperGlue','Paper adhesive'],['mounting','Ceiling attachment'],['fabrication','CNC setup, cutting and fit coupon'],['packaging','Packaging'],['handling','Handling']])add(k,label,1,null);
+ add('wood','Wood stock sheets',d.sheets.length,(Math.abs(d.input.sheetWidth-604.8248)<.01&&Math.abs(d.input.sheetHeight-604.8248)<.01)?9.99:null);add('paper','Kozo paper rolls',d.paperRolls.length,39.99);
+ for(const [k,label] of [['stockTrimming','Stock trimming to machine size'],['woodGlue','Wood adhesive'],['paperGlue','Paper adhesive'],['mounting','Ceiling attachment'],['fabrication','CNC setup, cutting and fit coupon'],['packaging','Packaging'],['handling','Handling']])add(k,label,1,null);
  const baseCents=lines.reduce((s,l)=>s+Math.round(l.total*100),0),fee=Math.round(baseCents*.1);let total=baseCents+fee;
  for(const k of ['shipping','tax']){if(c[k]==null||c[k]==='')unknown.push(k);else{const value=n(c[k],k,0,100000);total+=Math.round(value*100);lines.push({key:k,label:k,quantity:1,unitPrice:value,total:Math.round(value*100)/100});}}
- return {lines,knownTotal:total/100,cuFee:fee/100,unknown,firm:false,orderable:false,woodListingStatus:'Reference listing unavailable on 2026-10-20; supplier quote required',priceDate:'2026-10-20'};
+ return {lines,knownTotal:total/100,cuFee:fee/100,unknown,firm:false,orderable:false,stockOption:c.stockOption||'unspecified',woodListingStatus:c.stockOption==='custom'?'Custom stock and entered prices require supplier verification':'MakerStock B/BB nominal 3 mm candidate; verify actual thickness, grade, stock and delivered price; entered unit prices may override references',priceDate:'2026-10-20'};
 }
 const api={generate,svg,sheetSvg,coupon,quote,pack,area};if(typeof module==='object'&&module.exports)module.exports=api;else root.CUPanels=api;
 })(typeof window==='object'?window:globalThis);
