@@ -1,0 +1,25 @@
+To: thehive@westlinnoregon.gov
+Subject: CU.NGEN prototype: Glowforge access, panel fit and costs enquiry
+
+Hello Hive team,
+
+I live in Portland and am developing CU.NGEN, a paper-and-wood lantern-cover prototype with possible future commercial kits. Could I use your Glowforge Pro to make one prototype after the required training? I would like to understand eligibility, machine fit and all costs before committing.
+
+The five birch-plywood panels are provisionally 3.175 mm thick (nominal 1/8 inch):
+- A and B: 474.05 x 128.175 mm each
+- C and D: 450.05 x 128.175 mm each
+- E bottom: 474.05 x 474.05 mm (18.66 inches square)
+Two small fit coupons are also included. The geometry is a sample, not final manufacturing authorization; stock thickness and joints require verification.
+
+Could the bottom be cut in one piece using your Pro passthrough, and is that operation permitted and supported at The Hive? Please confirm usable widths/margins, approved stock, whether I can bring my own plywood, and whether you supply suitable stock or can help trim it to machine size. Is CU product-development prototyping permitted for a Portland resident, and do I need a specific library card?
+
+Please advise training availability and any training, booking, machine-time, materials or other charges, including whether access is free. I see sessions are one hour; would this job need multiple sessions? The design has about 27.7 metres of cut paths, excluding coupons; I would appreciate your actual time estimate. The files are finished boundaries, requiring suitable kerf compensation and a fit test; total slot allowance is provisionally 0.15 mm.
+
+Files: https://github.com/JonnyFaeth/CU.NGEN/tree/main/procurement/ceiling-sample
+ZIP: https://github.com/JonnyFaeth/CU.NGEN/raw/refs/heads/main/procurement/ceiling-sample.zip
+
+This is an information/pricing enquiry only. No paid work, booking, membership or purchases are authorized.
+
+Thank you,
+Jonathan D Faeth
+CU.NGEN
