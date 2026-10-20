@@ -11,5 +11,26 @@
    const h=solve(A,b);return p=>{const [x,y]=p,d=h[6]*x+h[7]*y+1;if(!Number.isFinite(d)||Math.abs(d)<1e-6)throw Error('Object is outside a reliable calibration region.');return [(h[0]*x+h[1]*y+h[2])/d,(h[3]*x+h[4]*y+h[5])/d];};
  }
  function measure(points,w,h){if(points.length!==6)throw Error('Mark four reference corners, then two opposite light corners.');const map=calibrate(points.slice(0,4),w,h),a=map(points[4]),b=map(points[5]);const width=Math.abs(b[0]-a[0]),height=Math.abs(b[1]-a[1]);if(![width,height].every(n=>Number.isFinite(n)&&n>=10&&n<=350))throw Error('Estimate falls outside the 10–350 mm desktop family. Check reference and marks.');return {width:Math.round(width*10)/10,height:Math.round(height*10)/10};}
- const api={calibrate,measure};if(typeof module!=='undefined')module.exports=api;else root.CUMeasure=api;
+ // Observable capture checks only: cannot establish object/reference coplanarity.
+ function inspectReference(ref,w,h){
+   calibrate(ref,w,h);
+   const edges=ref.map((p,i)=>[ref[(i+1)%4][0]-p[0],ref[(i+1)%4][1]-p[1]]),lengths=edges.map(p=>Math.hypot(...p));
+   const skew=Math.max(...edges.map((p,i)=>Math.abs((p[0]*edges[(i+1)%4][0]+p[1]*edges[(i+1)%4][1])/(lengths[i]*lengths[(i+1)%4]))));
+   const opposite=Math.max(lengths[0]/lengths[2],lengths[2]/lengths[0],lengths[1]/lengths[3],lengths[3]/lengths[1]);
+   const ratio=((lengths[0]+lengths[2])/w)/((lengths[1]+lengths[3])/h);
+   const reasons=[];
+   if(Math.min(...lengths)<60)reasons.push('Move closer: each reference edge needs at least 60 image pixels.');
+   if(skew>.17||opposite>1.15||ratio<.9||ratio>1.1)reasons.push('Retake straight on: the reference appears skewed or foreshortened.');
+   return {pass:reasons.length===0,reasons,minEdgePx:Math.min(...lengths),skew,opposite,scaleRatio:ratio};
+ }
+ function measureOutline(ref,outline,w,h){
+   if(!Array.isArray(outline)||outline.length<4||outline.length>12||!outline.every(p=>Array.isArray(p)&&p.length===2&&p.every(Number.isFinite)))throw Error('Mark 4–12 outer outline points, including all extremes.');
+   const quality=inspectReference(ref,w,h);if(!quality.pass)throw Error(quality.reasons.join(' '));
+   const map=calibrate(ref,w,h),rectified=outline.map(map);
+   const span=k=>Math.max(...rectified.map(p=>p[k]))-Math.min(...rectified.map(p=>p[k]));
+   const width=span(0),height=span(1);
+   if(![width,height].every(n=>Number.isFinite(n)&&n>=10&&n<=350))throw Error('Estimate falls outside the 10–350 mm desktop family. Check marks.');
+   return {width:Math.round(width*10)/10,height:Math.round(height*10)/10,quality,status:'Planning estimate; reference depth and hidden geometry are not verified'};
+ }
+ const api={calibrate,measure,inspectReference,measureOutline};if(typeof module!=='undefined')module.exports=api;else root.CUMeasure=api;
 })(typeof window==='undefined'?globalThis:window);

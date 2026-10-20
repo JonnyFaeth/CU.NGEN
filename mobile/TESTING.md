@@ -11,3 +11,7 @@ Software checks on 2026-10-17/18. No physical phone or lamp was available.
 - Phone icons and web-app manifest are generated without external libraries. Actual Safari Home Screen installation, camera capture, offline behavior behind hosted authentication and phone file sharing still need device checks.
 
 Limitations: calibration is coplanar, not a 3D scan; test fixtures do not establish real camera accuracy. Pricing is a planning estimate, not a supplier-backed delivered quote. No physical kit has been validated.
+
+## 0.4 checks — 2026-10-20
+
+18 engine/mobile tests pass, including new outline, rejection and package-confirmation checks. Browser checks verified export disabled before confirmation, enabled after confirmation, successful HTML download, and disabled again after editing width. Eight taps on the synthetic 80 × 140 mm fixture returned 78.4 × 139.2 mm; this measures UI click/calculation behavior, not camera accuracy. The 5,400-trial comparison and its negative accuracy finding are in `simulations/COMPARISON.md`.

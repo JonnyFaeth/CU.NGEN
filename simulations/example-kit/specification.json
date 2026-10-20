@@ -1,0 +1,372 @@
+{
+  "schema": "cu-kit-package",
+  "version": 1,
+  "appVersion": "0.4.0",
+  "measurementStatus": "SYNTHETIC exact-dimension fixture; not a user measurement or physical build",
+  "orderPlaced": false,
+  "design": {
+    "version": "0.2.0",
+    "input": {
+      "width": 80,
+      "depth": 80,
+      "height": 140,
+      "clearance": 35,
+      "tolerance": 3,
+      "gap": 25,
+      "style": "split",
+      "lightType": "unknown",
+      "confirmed": true,
+      "clearanceVerified": false,
+      "evidence": "Synthetic fixture only; no physical lamp measured",
+      "name": "Synthetic 80 × 80 × 140 mm fixture"
+    },
+    "frame": {
+      "width": 181.4,
+      "depth": 181.4,
+      "height": 191,
+      "section": 12.7,
+      "gap": 25,
+      "openingH": 140.6
+    },
+    "clearance": {
+      "sides": 38,
+      "frontBack": 38,
+      "top": 38.3
+    },
+    "cuts": [
+      {
+        "id": "A1",
+        "part": "Upright",
+        "length": 191
+      },
+      {
+        "id": "A2",
+        "part": "Upright",
+        "length": 191
+      },
+      {
+        "id": "A3",
+        "part": "Upright",
+        "length": 191
+      },
+      {
+        "id": "A4",
+        "part": "Upright",
+        "length": 191
+      },
+      {
+        "id": "B1",
+        "part": "Front/back rail",
+        "length": 156
+      },
+      {
+        "id": "B2",
+        "part": "Front/back rail",
+        "length": 156
+      },
+      {
+        "id": "B3",
+        "part": "Front/back rail",
+        "length": 156
+      },
+      {
+        "id": "B4",
+        "part": "Front/back rail",
+        "length": 156
+      },
+      {
+        "id": "C1",
+        "part": "Side rail",
+        "length": 156
+      },
+      {
+        "id": "C2",
+        "part": "Side rail",
+        "length": 156
+      },
+      {
+        "id": "C3",
+        "part": "Side rail",
+        "length": 156
+      },
+      {
+        "id": "C4",
+        "part": "Side rail",
+        "length": 156
+      },
+      {
+        "id": "D1",
+        "part": "Center mullion",
+        "length": 140.6
+      },
+      {
+        "id": "D2",
+        "part": "Center mullion",
+        "length": 140.6
+      },
+      {
+        "id": "D3",
+        "part": "Center mullion",
+        "length": 140.6
+      },
+      {
+        "id": "D4",
+        "part": "Center mullion",
+        "length": 140.6
+      }
+    ],
+    "bars": [
+      {
+        "pieces": [
+          {
+            "id": "A1",
+            "part": "Upright",
+            "length": 191
+          },
+          {
+            "id": "A2",
+            "part": "Upright",
+            "length": 191
+          },
+          {
+            "id": "A3",
+            "part": "Upright",
+            "length": 191
+          },
+          {
+            "id": "A4",
+            "part": "Upright",
+            "length": 191
+          }
+        ],
+        "remaining": 128.4
+      },
+      {
+        "pieces": [
+          {
+            "id": "B1",
+            "part": "Front/back rail",
+            "length": 156
+          },
+          {
+            "id": "B2",
+            "part": "Front/back rail",
+            "length": 156
+          },
+          {
+            "id": "B3",
+            "part": "Front/back rail",
+            "length": 156
+          },
+          {
+            "id": "B4",
+            "part": "Front/back rail",
+            "length": 156
+          },
+          {
+            "id": "C1",
+            "part": "Side rail",
+            "length": 156
+          }
+        ],
+        "remaining": 109.4
+      },
+      {
+        "pieces": [
+          {
+            "id": "C2",
+            "part": "Side rail",
+            "length": 156
+          },
+          {
+            "id": "C3",
+            "part": "Side rail",
+            "length": 156
+          },
+          {
+            "id": "C4",
+            "part": "Side rail",
+            "length": 156
+          },
+          {
+            "id": "D1",
+            "part": "Center mullion",
+            "length": 140.6
+          },
+          {
+            "id": "D2",
+            "part": "Center mullion",
+            "length": 140.6
+          }
+        ],
+        "remaining": 140.2
+      },
+      {
+        "pieces": [
+          {
+            "id": "D3",
+            "part": "Center mullion",
+            "length": 140.6
+          },
+          {
+            "id": "D4",
+            "part": "Center mullion",
+            "length": 140.6
+          }
+        ],
+        "remaining": 617.2
+      }
+    ],
+    "panels": [
+      {
+        "face": "Front / back",
+        "qty": 2,
+        "width": 168,
+        "height": 152.6
+      },
+      {
+        "face": "Left / right",
+        "qty": 2,
+        "width": 168,
+        "height": 152.6
+      }
+    ],
+    "bom": [
+      {
+        "key": "wood",
+        "qty": 4,
+        "name": "½ × ½ × 36 in square birch/poplar dowel",
+        "sku": "DRSQ-12-36",
+        "price": 2.13,
+        "date": "2026-10-17",
+        "status": "Listing says unavailable; confirm or source equivalent locally",
+        "url": "https://woodpeckerscrafts.com/products/1-2-x-36-square-dowel",
+        "line": 8.52
+      },
+      {
+        "key": "paperLetter",
+        "qty": 4,
+        "name": "Off-white kozo paper, 45 gsm, 8½ × 11 in",
+        "sku": "GPC-TN-2751-8",
+        "price": 1.85,
+        "date": "2026-10-17",
+        "status": "Verify stock at checkout",
+        "url": "https://mulberrypaperandmore.com/p-1029-mulberry-paper-unbleached-off-white.aspx",
+        "line": 7.4
+      },
+      {
+        "key": "glue",
+        "qty": 1,
+        "name": "Titebond Original wood glue, 4 oz",
+        "sku": "Rockler 80862",
+        "price": 2.99,
+        "date": "2026-10-17",
+        "status": "Verify variant and stock at checkout",
+        "url": "https://www.rockler.com/titebondreg-original-glue-optional-sizes",
+        "line": 2.99
+      },
+      {
+        "key": "paste",
+        "qty": 1,
+        "name": "Shoji Nori Glue, 150 g",
+        "sku": "Y7",
+        "price": 5.99,
+        "date": "2026-10-17",
+        "status": "Verify stock at checkout",
+        "url": "https://www.eshoji.com/shoji-nori-glue/",
+        "line": 5.99
+      }
+    ],
+    "listedSubtotal": 24.9,
+    "holds": [
+      "Identify the complete light and its source type.",
+      "Record manufacturer installation guidance that permits a surround and its required clearances."
+    ],
+    "status": "Measurement / integration review needed",
+    "physicalApproval": false,
+    "priceDate": "2026-10-17",
+    "assumptions": [
+      "Independent open-top/open-bottom surround. Original light stays on its own base on a flat table.",
+      "12.7 mm square stock; nominal cut lengths. Actual stock variation must be checked.",
+      "3 mm kerf per cut, 10 mm end trim per 914.4 mm bar. First-fit packing, not proven optimal.",
+      "No joint strength, thermal suitability, tipping resistance, optical output or runtime is certified.",
+      "Catalog prices are dated listings, not live quotes. Tools, shipping, tax and testing excluded."
+    ],
+    "material": {
+      "woodVolumeMm3": 415224.98,
+      "paperAreaM2": 0.1
+    }
+  },
+  "style": "Split",
+  "materials": {
+    "lines": [
+      {
+        "key": "wood",
+        "qty": 4,
+        "name": "½ × ½ × 36 in square poplar dowel",
+        "sku": "Madison Mill 444506 / Lowe’s 27692",
+        "price": 2.49,
+        "date": "2026-10-17",
+        "status": "Confirm destination price and stock",
+        "url": "https://www.lowes.com/pd/Madison-Mill-Square-Wood-Poplar-Dowel-Actual-36-in-L-x-0-5-in-dia/3041503",
+        "line": 9.96,
+        "source": "Dated Lowe’s listing"
+      },
+      {
+        "key": "paperLetter",
+        "qty": 4,
+        "name": "Off-white kozo paper, 45 gsm, 8½ × 11 in",
+        "sku": "GPC-TN-2751-8",
+        "price": 1.85,
+        "date": "2026-10-17",
+        "status": "Verify stock at checkout",
+        "url": "https://mulberrypaperandmore.com/p-1029-mulberry-paper-unbleached-off-white.aspx",
+        "line": 7.4,
+        "source": "Catalog listing"
+      },
+      {
+        "key": "glue",
+        "qty": 1,
+        "name": "Titebond Original wood glue, 4 oz",
+        "sku": "Rockler 80862",
+        "price": 2.99,
+        "date": "2026-10-17",
+        "status": "Verify variant and stock at checkout",
+        "url": "https://www.rockler.com/titebondreg-original-glue-optional-sizes",
+        "line": 2.99,
+        "source": "Catalog listing"
+      },
+      {
+        "key": "paste",
+        "qty": 1,
+        "name": "Shoji Nori Glue, 150 g",
+        "sku": "Y7",
+        "price": 5.99,
+        "date": "2026-10-17",
+        "status": "Verify stock at checkout",
+        "url": "https://www.eshoji.com/shoji-nori-glue/",
+        "line": 5.99,
+        "source": "Catalog listing"
+      }
+    ],
+    "knownTotal": 26.34,
+    "unknown": [],
+    "complete": true
+  },
+  "quote": {
+    "kitCost": 26.34,
+    "cuFee": 2.63,
+    "knownTotal": 28.97,
+    "unknown": [
+      "fabrication",
+      "packaging",
+      "handling",
+      "shipping",
+      "tax"
+    ],
+    "firm": false,
+    "feeRate": 0.1,
+    "orderable": false
+  },
+  "costInputs": {}
+}

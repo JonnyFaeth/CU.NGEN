@@ -4,9 +4,9 @@ CU.NGEN is CU's public workspace for designing affordable, reproducible systems 
 
 ## Try Lantern Studio
 
-**Phone edition 0.3:** [mobile app and CU quote-flow source](mobile/README.md). Includes camera/library capture, perspective-reference measurement, three generated design choices, an expandable cost breakdown and a 10% CU fee. Payment and fulfillment are not launched; kit specifications are saved locally, not submitted as orders.
+**Phone edition 0.4:** [mobile app and CU quote-flow source](mobile/README.md). Includes camera/library capture, perspective-reference measurement, three generated design choices, an expandable cost breakdown and a 10% CU fee. Payment and fulfillment are not launched; kit specifications are saved locally, not submitted as orders.
 
-[Hosted phone review](https://cu-ngen-lantern.jbon3.chatgpt.site) (owner-private; sign-in required). [Mobile download](https://github.com/JonnyFaeth/CU.NGEN/releases/tag/mobile-v0.3.0). On iPhone, use the hosted link in Safari and Share → Add to Home Screen. Direct ZIP/HTML opening is not the iPhone installation path.
+[Hosted phone review](https://cu-ngen-lantern.jbon3.chatgpt.site) (owner-private; sign-in required). [Mobile download](https://github.com/JonnyFaeth/CU.NGEN/releases/tag/mobile-v0.4.0). On iPhone, use the hosted link in Safari and Share → Add to Home Screen. Direct ZIP/HTML opening is not the iPhone installation path.
 
 [Download the latest Lantern Studio release](https://github.com/JonnyFaeth/CU.NGEN/releases/tag/lantern-v0.2.0) or open [app/index.html](app/index.html) locally after downloading the repository. No installation, account or API key is needed. [App guide](app/README.md).
 
@@ -44,3 +44,5 @@ CU is independent of Hugging Face and the LeRobot maintainers. Integration is a 
 This repository is public, but a reuse license has not yet been selected. See [licensing status](LICENSING.md) before reusing material. Software, documentation, and future hardware designs may require different licensing decisions.
 
 Contributions and discussions should be respectful, specific, and evidence-based. Disclose substantial AI assistance and distinguish proposed capabilities from demonstrated results.
+
+Latest evaluation: [capture comparison](simulations/COMPARISON.md). Automatic 3D measurement remains unresolved; kit exports now require user-confirmed dimensions. [Synthetic example package](simulations/example-kit/kit.html).

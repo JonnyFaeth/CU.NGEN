@@ -1,0 +1,10 @@
+const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
+const E=require('../app/engine'),K=require('../mobile/kit');
+const scope={window:{}};vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../dist/mobile/view.js'),'utf8'),scope);
+const input={width:80,depth:80,height:140,clearance:35,tolerance:3,gap:25,style:'split',lightType:'unknown',confirmed:true,clearanceVerified:false,evidence:'Synthetic fixture only; no physical lamp measured',name:'Synthetic 80 × 80 × 140 mm fixture'};
+const d=E.design(input),p=K.packageData(d,'Split',{});p.measurementStatus='SYNTHETIC exact-dimension fixture; not a user measurement or physical build';
+const out=path.join(__dirname,'example-kit');fs.mkdirSync(out,{recursive:true});
+fs.writeFileSync(path.join(out,'specification.json'),JSON.stringify(p,null,2));
+let html=K.html(d,'Split — synthetic example',{},scope.window.CUView);html=html.replace('<body>','<body>');html=html.replace('<h1>','<p><strong>SYNTHETIC TEST FIXTURE. No physical lamp was measured or assembled.</strong></p><h1>');fs.writeFileSync(path.join(out,'kit.html'),html);
+fs.writeFileSync(path.join(out,'drawing.svg'),scope.window.CUView.diagram(d));
+console.log(JSON.stringify({cuts:d.cuts.length,rods:d.bars.length,frame:d.frame,knownEstimate:p.quote.knownTotal,fee:p.quote.cuFee,unknown:p.quote.unknown}));

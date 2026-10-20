@@ -1,4 +1,4 @@
-# CU Lantern mobile 0.3
+# CU Lantern mobile 0.4
 
 Phone-first static web app and CU quote preview, targeting Safari on iPhone 16 Pro. No paid API or external runtime dependencies. Source is public; the first hosted review is owner-private.
 
@@ -6,7 +6,7 @@ Run `python scripts/build_mobile.py`, then serve `dist/mobile` with any local HT
 
 ## Working flow
 
-Camera/library input -> six-point coplanar rectangle calibration -> front/side estimates -> physical dimensions -> three regenerated styles -> CU cost preview -> review and locally export a kit specification. Save/open projects and download illustrated assembly instructions. Photos never leave the device. No address or payment information is collected. No order is submitted by saving a specification.
+Camera/library input -> four reference corners plus 4–12 outline points -> front/side estimates -> physical dimensions -> three regenerated styles -> CU cost preview -> review and locally export a kit specification. Save/open projects and download illustrated assembly instructions. Photos never leave the device. No address or payment information is collected. No order is submitted by saving a specification.
 
 The quoted base uses full purchased materials from the existing engine, with a documented $2.49 Lowe's wood substitution. See `projects/cu-lamps/PROCUREMENT.md`. This is conservative per-kit purchasing, not bulk CU manufacturing cost. All prices remain dated listings; no live supplier integration. Fabrication, packaging, handling, shipping and tax begin unquoted. The visible estimate includes 10% of known materials/fabrication/packaging/handling; shipping and tax do not receive the markup. Unknown costs are never silently treated as zero. Detailed lines are collapsed initially.
 
@@ -23,3 +23,7 @@ The public-domain lamp photo exercises loading and marking only. Known synthetic
 The kit checkout is deliberately closed. Requests are downloaded locally and explicitly unsubmitted. Before enabling commerce: validated physical kit, confirmed sourcing and labor, CU fulfillment, merchant account, order backend and final delivery/tax quote. The client-side estimate must never be trusted as the charge amount in a future payment integration.
 
 No real phone camera, Safari installation, physical prototype or lit-use testing has been completed by this software build. The UI and known-dimension math can be tested without claiming those results.
+
+## Version 0.4 changes
+
+Outline marking and provisional reference-quality checks replace two bounding corners in the phone UI. The legacy measurement API is retained to reproduce the historical benchmark. The comparison did not establish better 3D accuracy; see `simulations/COMPARISON.md`. Complete HTML kit exports require ruler confirmation and include matched quote lines, cut allocation, numbered front/back diagrams and assembly steps. A synthetic fixture package is supplied for review, not as evidence of a physical build.
