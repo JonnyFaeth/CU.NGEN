@@ -1,0 +1,74 @@
+{
+  "sourceSHA256": "fb10d93bbebf5c5cf20b4aaca1794762ea9e6c2f98eeab8654e562c675b52c74",
+  "geometryChanged": false,
+  "sourceProjectionMm": 100,
+  "sourceThicknessMm": 3.175,
+  "units": "mm",
+  "manufacturingReady": false,
+  "verification": "DXF library read-back, clean audit, every segment and perimeter match; PDF page sizes and every vector coordinate match",
+  "pages": [
+    {
+      "page": 1,
+      "part": "A",
+      "quantity": 1,
+      "widthMm": 474.05,
+      "heightMm": 128.175,
+      "contours": 10,
+      "cutLengthMm": 5644.266666666666
+    },
+    {
+      "page": 2,
+      "part": "B",
+      "quantity": 1,
+      "widthMm": 474.05,
+      "heightMm": 128.175,
+      "contours": 10,
+      "cutLengthMm": 5644.266666666666
+    },
+    {
+      "page": 3,
+      "part": "C",
+      "quantity": 1,
+      "widthMm": 450.05,
+      "heightMm": 128.175,
+      "contours": 6,
+      "cutLengthMm": 5414.5
+    },
+    {
+      "page": 4,
+      "part": "D",
+      "quantity": 1,
+      "widthMm": 450.05,
+      "heightMm": 128.175,
+      "contours": 6,
+      "cutLengthMm": 5414.5
+    },
+    {
+      "page": 5,
+      "part": "E",
+      "quantity": 1,
+      "widthMm": 474.05,
+      "heightMm": 474.05,
+      "contours": 13,
+      "cutLengthMm": 5565.4
+    },
+    {
+      "page": 6,
+      "part": "coupon-tab",
+      "quantity": 1,
+      "widthMm": 60,
+      "heightMm": 33.175,
+      "contours": 1,
+      "cutLengthMm": 186.35
+    },
+    {
+      "page": 7,
+      "part": "coupon-slot",
+      "quantity": 1,
+      "widthMm": 60,
+      "heightMm": 30,
+      "contours": 2,
+      "cutLengthMm": 226.95000000000002
+    }
+  ]
+}

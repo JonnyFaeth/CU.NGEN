@@ -1,0 +1,23 @@
+CU ORIGINAL RFQ - COMPATIBILITY RE-EXPORT - PRICING ONLY
+
+Geometry is unchanged from the original RFQ: nominal 3.175 mm stock,
+100 mm SYNTHETIC fixture projection, largest panel E 474.05 x 474.05 mm.
+This is not the newer nine-inch planning design. No paid work is authorized.
+
+Use ONE format only, not all alternatives:
+- CU-original-RFQ-full-scale.pdf: seven vector pages at 1:1 in millimeters.
+  Each page has a 10 mm margin around the part envelope. No text or raster
+  images are embedded in the cutting pages. Bookmarks identify the parts.
+  Do not scale to fit a printer or artboard. Check E measures 474.05 mm.
+- *_r2010.dxf: model-space closed LWPOLYLINE contours, CUT layer, mm units.
+- *_r12_lines.dxf: separate LINE segments for legacy import. Set import
+  units to MILLIMETERS manually. Join coincident endpoints if required.
+
+Page order / quantity per set: A, B, C, D, E, coupon-tab, coupon-slot;
+one of each. A/B match each other; C/D match each other.
+Finished geometry only. Supplier applies calibrated kerf compensation.
+Internal contours first. Coupon and material/joint verification required.
+Mounting and final dimensions remain unresolved. DO NOT MANUFACTURE.
+
+Verified in ezdxf 1.4.5 and pypdf. Supplier CAM compatibility is not yet
+confirmed. Please report CAD/CAM software and import errors if it fails.
