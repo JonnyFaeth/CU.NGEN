@@ -4,9 +4,9 @@ CU.NGEN is CU's public workspace for designing affordable, reproducible systems 
 
 ## Try Lantern Studio
 
-**Phone edition 0.5:** [mobile app and CU quote-flow source](mobile/README.md). Includes camera/library capture, perspective-reference measurement, three generated design choices, an expandable cost breakdown and a 10% CU fee. Payment and fulfillment are not launched; kit specifications are saved locally, not submitted as orders.
+**Phone edition 0.6:** [mobile app and CU quote-flow source](mobile/README.md). Includes camera/library capture, perspective-reference measurement, three generated design choices, an expandable cost breakdown and a 10% CU fee. Payment and fulfillment are not launched; kit specifications are saved locally, not submitted as orders.
 
-[Hosted phone review](https://cu-ngen-lantern.jbon3.chatgpt.site) (owner-private; sign-in required). [Mobile download](https://github.com/JonnyFaeth/CU.NGEN/releases/tag/mobile-v0.5.0). On iPhone, use the hosted link in Safari and Share → Add to Home Screen. Direct ZIP/HTML opening is not the iPhone installation path.
+[Hosted phone review](https://cu-ngen-lantern.jbon3.chatgpt.site) (owner-private; sign-in required). [Mobile download](https://github.com/JonnyFaeth/CU.NGEN/releases/tag/mobile-v0.6.0). On iPhone, use the hosted link in Safari and Share → Add to Home Screen. Direct ZIP/HTML opening is not the iPhone installation path.
 
 [Download the latest Lantern Studio release](https://github.com/JonnyFaeth/CU.NGEN/releases/tag/lantern-v0.2.0) or open [app/index.html](app/index.html) locally after downloading the repository. No installation, account or API key is needed. [App guide](app/README.md).
 
@@ -47,4 +47,4 @@ Contributions and discussions should be respectful, specific, and evidence-based
 
 Latest evaluation: [capture comparison](simulations/COMPARISON.md). Automatic 3D measurement remains unresolved; kit exports now require user-confirmed dimensions. [Synthetic example package](simulations/example-kit/kit.html).
 
-New in 0.5: [assisted ceiling capture](simulations/CEILING-CAPTURE.md) with local OpenCV rim suggestions, editable outline, mm/inch entry and confirmed-dimension export. [Scanning projects evaluated](projects/cu-lamps/SCANNING-RESEARCH.md). Ceiling CNC generation and pricing are not implemented.
+New in 0.5: [assisted ceiling capture](simulations/CEILING-CAPTURE.md) with local OpenCV rim suggestions, editable outline, mm/inch entry and confirmed-dimension export. [Scanning projects evaluated](projects/cu-lamps/SCANNING-RESEARCH.md). Version 0.6 adds [five-panel CNC laser geometry and parts estimates](projects/cu-lamps/PANEL-GENERATOR.md); physical fit and mounting remain unverified.

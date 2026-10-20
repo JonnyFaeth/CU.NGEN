@@ -1,3 +1,11 @@
+# Version 0.6 — five-panel prototype generator
+
+Confirmed ceiling measurements now feed five CNC laser panels with complementary tabs/slots, three patterns, an assembled preview, stock layouts and an incomplete parts estimate. Download a ZIP with five millimeter SVGs, nested sheet SVGs, paper layout, fit coupon, JSON and HTML assembly guide. No router reliefs or G-code. Supplier kerf compensation and physical coupon fitting remain required.
+
+Try the labelled synthetic example without entering measurements. The sample uses 100 mm projection, not a measurement of the owner fixture. Whole-stock baseline pricing includes a currently unavailable wood listing; all unquoted costs stay visible. Mounting is unresolved and orders remain closed. See [geometry and validation](../projects/cu-lamps/PANEL-GENERATOR.md).
+
+## Previous capture release
+
 # Version 0.5 — assisted ceiling capture
 
 Ceiling mode now starts the app. Load a JPEG/PNG, review the local OpenCV rim suggestion or mark two corners, enter diameter and total ceiling projection, confirm with a ruler, and save a photo-free measurement JSON. Manual entry also works. The new mode does not generate CNC panels or ceiling kit prices. Tabletop mode retains the previous design tool.

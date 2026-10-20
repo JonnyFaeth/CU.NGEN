@@ -46,3 +46,5 @@ Quote includes sheet usage and waste, CNC setup/cutting, paper, adhesive, mounti
 7. Ceiling attachment is selected against its actual use conditions before an installation-ready kit is offered.
 
 Photos establish style, not dimensions. Ceiling mounting, CNC generation, and this five-panel bill of materials remain new work; this document does not claim those app features exist.
+
+Implementation update, mobile 0.6: [five-panel CNC laser generator](PANEL-GENERATOR.md) now provides prototype drawings and cost estimates. Router cutting, verified mounting and physical fit remain unimplemented/unvalidated. Earlier future-tense notes above describe the original brief.

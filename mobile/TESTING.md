@@ -15,3 +15,7 @@ Limitations: calibration is coplanar, not a 3D scan; test fixtures do not establ
 ## 0.4 checks — 2026-10-20
 
 18 engine/mobile tests pass, including new outline, rejection and package-confirmation checks. Browser checks verified export disabled before confirmation, enabled after confirmation, successful HTML download, and disabled again after editing width. Eight taps on the synthetic 80 × 140 mm fixture returned 78.4 × 139.2 mm; this measures UI click/calculation behavior, not camera accuracy. The 5,400-trial comparison and its negative accuracy finding are in `simulations/COMPARISON.md`.
+
+## Version 0.6
+
+Run `node --test mobile/panels.test.cjs mobile/scan.test.cjs mobile/mobile.test.cjs app/engine.test.cjs` from the repo root. 31 tests pass. Browser ZIP downloaded and checked with Python zipfile and XML parsing. See projects/cu-lamps/PANEL-GENERATOR.md for geometry, limitations and the synthetic example.

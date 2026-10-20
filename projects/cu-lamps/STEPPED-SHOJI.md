@@ -40,3 +40,5 @@ No absolute dimensions can be recovered reliably from these uncalibrated views. 
 Model the measured fixture envelope and lantern separately. Check intersection, access for lamp replacement, panel assembly order, stock use, and quote completeness. Build and weigh a small joint sample before selecting the suspension design. Physical fit and attachment remain untested; no new software feature or physical validation is claimed by this reference document.
 
 Original home photographs, video, metadata, and decoded previews stay local and are not included in the public repository. This document records only project-relevant observations. No image training dataset has been created.
+
+Implementation update, mobile 0.6: [five-panel CNC laser generator](PANEL-GENERATOR.md) now provides prototype drawings and cost estimates. Router cutting, verified mounting and physical fit remain unimplemented/unvalidated. Earlier future-tense notes above describe the original brief.
