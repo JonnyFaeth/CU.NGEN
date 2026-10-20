@@ -2,6 +2,8 @@
 
 Research date: 2026-10-20. Estimates, not quotes. Current sample has a synthetic 100 mm fixture projection. No additional supplier contacted or booking made.
 
+**Updated material sourcing:** [Material-efficiency package](../../procurement/material-efficiency/README.md) identifies a $19.98 two-sheet B/BB candidate against the $42.12 historical allowance below, verifies unchanged panel layouts and eight paper sets per roll, and separates shipping and first-purchase costs. The historical scenario below is retained for traceability, not a current recommended purchase.
+
 ## Access and service shortlist
 
 - [PDX Hackerspace FAQ](https://pdxhackerspace.org/FAQ.html): $40/month membership, application and equipment sign-off. Its [laser wiki](https://wiki.pdxhackerspace.org/en/lasercutting/Overview) lists $5 per 30 minutes actual firing time and $5 monthly member credit. Confirm current laser availability, usable bed >=474.05 mm on both axes, stock acceptance and CU commercial prototyping policy before joining. Membership approval may take weeks. Public open houses do not themselves authorize machine use.
