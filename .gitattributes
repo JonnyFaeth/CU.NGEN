@@ -5,3 +5,5 @@
 *.json text eol=lf
 
 mobile/vendor/* -text
+*.pdf binary
+*.zip binary
