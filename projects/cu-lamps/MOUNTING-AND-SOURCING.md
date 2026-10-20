@@ -1,6 +1,6 @@
 # Ceiling mounting and fabrication sourcing
 
-Research date: 2026-10-20. Status: supplier shortlist and sample RFQ prepared; no supplier quote received, no order placed. The owner confirmed fixture projection, model and stem thread are unknown.
+Research date: 2026-10-20. Status: sample RFQ submitted to MC Laser Labs through its contact form on 2026-10-20; no supplier quote received, no order placed. The owner confirmed fixture projection, model and stem thread are unknown.
 
 ## Mount decision
 
@@ -18,11 +18,11 @@ Before selecting hardware: confirm model/thread, measure ceiling-to-lowest-point
 
 | Supplier | Evidence | Decision |
 | --- | --- | --- |
-| [MC Laser Labs, Portland](https://www.mclaserlabs.com/co2-laser) | Published 32 × 20 inch bed; wood and paper processing | First local quote candidate. Sample bottom 18.66 inches square fits the published envelope; usable margins and stock still need confirmation. |
+| [MC Laser Labs, Portland](https://www.mclaserlabs.com/co2-laser) | Published 32 × 20 inch bed; wood and paper processing; live contact form lists a $150 job minimum | First local quote candidate. Sample bottom 18.66 inches square fits the published envelope; usable margins and stock still need confirmation. |
 | [SendCutSend](https://sendcutsend.com/materials/baltic-birch-plywood/) | Lists nominal 0.125 inch birch and online quoting; published size capacity accommodates sample | Online comparison candidate. Confirm laser process, thickness and feature acceptance. Website contains inconsistent maximum-size/tolerance statements, so no precise tolerance is assumed. |
 | [Digital Craft PDX](https://www.digitalcraftpdx.com/faq/) | Published larger laser bed 18 × 32 inches; $85/hour and $65 minimum | Current bottom exceeds 18 inch width. Do not treat $65 as a quote for this kit. Router service would require geometry changes. |
 
-MC Laser Labs [contact/quote page](https://www.mclaserlabs.com/contact-1): marshall@mclaserlabs.com, 503-484-4275, 525 NE Davis St, Portland. No enquiry has been sent.
+MC Laser Labs [contact/quote page](https://www.mclaserlabs.com/contact-1): marshall@mclaserlabs.com, 503-484-4275, 525 NE Davis St, Portland. Enquiry submitted with public sample-file links; the form displayed “Thank you!” after submission. ZIP attachment was rejected by the form, so the successful submission used a GitHub folder link and direct ZIP download link. Requested prices for 1, 5 and 10 sets, including clarification of the $150 job minimum. No paid work authorized. Replies requested through the owner’s supplied email address.
 
 The [sample RFQ package](../../procurement/ceiling-sample/README.md) includes seven individual part files in both DXF and SVG: five enclosure panels plus two coupon pieces. It uses nominal 3.175 mm stock and **synthetic 100 mm fixture projection**, not a confirmed fitted design. No private home photos are included.
 

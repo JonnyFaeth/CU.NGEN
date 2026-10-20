@@ -1,4 +1,6 @@
-# Draft enquiry to MC Laser Labs — not sent
+# Prepared enquiry to MC Laser Labs
+
+Submission record, 2026-10-20: a revised version of this enquiry was successfully submitted through the supplier contact form. It included the published $150 job minimum, asked how it applies to 1/5/10 sets, and supplied GitHub folder and ZIP-download links because the form rejected ZIP attachments. The form returned “Thank you!” No paid work was authorized. The text below preserves the originally prepared draft.
 
 Subject: Quote request — five laser-cut plywood lantern panels, prototype and small batch
 
