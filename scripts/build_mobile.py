@@ -10,6 +10,7 @@ OUT.mkdir(parents=True,exist_ok=True)
 for file in (ROOT/'mobile').iterdir():
     if file.is_file() and not file.name.endswith('.test.cjs'):
         shutil.copyfile(file,OUT/file.name)
+shutil.copytree(ROOT/'mobile/vendor',OUT/'vendor',dirs_exist_ok=True)
 shutil.copyfile(ROOT/'app/engine.js',OUT/'engine.js')
 ui=(ROOT/'app/app.js').read_text(encoding='utf-8')
 start=ui.index('function diagram(')
@@ -32,9 +33,9 @@ def icon(size):
     def chunk(kind,data):return struct.pack('>I',len(data))+kind+data+struct.pack('>I',zlib.crc32(kind+data)&0xffffffff)
     return b'\x89PNG\r\n\x1a\n'+chunk(b'IHDR',struct.pack('>IIBBBBB',size,size,8,2,0,0,0))+chunk(b'IDAT',zlib.compress(b''.join(rows)))+chunk(b'IEND',b'')
 for size in [180,192,512]:(OUT/f'icon-{size}.png').write_bytes(icon(size))
-archive=ROOT/'dist'/'CU-NGEN-Mobile-0.4.0.zip'
+archive=ROOT/'dist'/'CU-NGEN-Mobile-0.5.0.zip'
 with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as z:
-    for file in sorted(OUT.iterdir()):
-        if file.is_file():z.write(file,'CU-NGEN-Mobile/'+file.name)
+    for file in sorted(OUT.rglob('*')):
+        if file.is_file():z.write(file,'CU-NGEN-Mobile/'+file.relative_to(OUT).as_posix())
 print(str(OUT))
 print(str(archive))

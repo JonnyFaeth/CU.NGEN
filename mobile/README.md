@@ -1,3 +1,9 @@
+# Version 0.5 — assisted ceiling capture
+
+Ceiling mode now starts the app. Load a JPEG/PNG, review the local OpenCV rim suggestion or mark two corners, enter diameter and total ceiling projection, confirm with a ruler, and save a photo-free measurement JSON. Manual entry also works. The new mode does not generate CNC panels or ceiling kit prices. Tabletop mode retains the previous design tool.
+
+OpenCV is bundled under its own license; see THIRD-PARTY.md. The first offline cache includes about 11 MB of image-processing code. Older installed apps may need all tabs closed and reopened to activate the update.
+
 # CU Lantern mobile 0.4
 
 Phone-first static web app and CU quote preview, targeting Safari on iPhone 16 Pro. No paid API or external runtime dependencies. Source is public; the first hosted review is owner-private.
