@@ -4,6 +4,8 @@ CU.NGEN is CU's public workspace for designing affordable, reproducible systems 
 
 ## Try Lantern Studio
 
+[Ceiling mounting and supplier research](projects/cu-lamps/MOUNTING-AND-SOURCING.md) · [Sample fabrication quote package](procurement/ceiling-sample/README.md). Prepared for supplier review; no final kit price or approved ceiling mount yet.
+
 **Phone edition 0.6:** [mobile app and CU quote-flow source](mobile/README.md). Includes camera/library capture, perspective-reference measurement, three generated design choices, an expandable cost breakdown and a 10% CU fee. Payment and fulfillment are not launched; kit specifications are saved locally, not submitted as orders.
 
 [Hosted phone review](https://cu-ngen-lantern.jbon3.chatgpt.site) (owner-private; sign-in required). [Mobile download](https://github.com/JonnyFaeth/CU.NGEN/releases/tag/mobile-v0.6.0). On iPhone, use the hosted link in Safari and Share → Add to Home Screen. Direct ZIP/HTML opening is not the iPhone installation path.
