@@ -75,3 +75,7 @@ Select one actual wood section, paper, base material and complete LED source. Re
 The [Noguchi Museum's Akari collection](https://shop.noguchi.org/collections/akari-light-sculptures) describes washi paper and bamboo construction, a material reference rather than a template copied here. Our square wood frame is a distinct proposed construction. [IKEA's STRÅLA paper shade](https://www.ikea.com/gb/en/p/strala-lamp-shade-paper-star-white-green-10639886/) illustrates separating a paper shade from a compatible light source; its compatibility statements do not transfer to our design. References consulted 2026-10-17.
 
 Substantial AI assistance was used to draft this implementation and documentation. Automated tests establish software behavior only. Licensing remains governed by the repository's [licensing status](../../LICENSING.md).
+
+## Ceiling lantern reference
+
+[Stepped Shoji design reference](STEPPED-SHOJI.md) records the first actual ceiling fixture and handmade style study. Ceiling mounting is a new, unimplemented product mode; the current freestanding kit does not cover this fixture. Source home media stays local.
