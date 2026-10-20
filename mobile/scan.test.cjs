@@ -11,3 +11,5 @@ test('OpenCV detects a synthetic elliptical rim and rejects a blank frame',async
  for(let y=0;y<h;y++)for(let x=0;x<w;x++){const r=((x-200)/110)**2+((y-180)/75)**2;if(r<=1&&r>=.65){const i=(y*w+x)*4;data[i]=data[i+1]=data[i+2]=25;}}
  const b=S.suggest(cv,{width:w,height:h,data})[0];assert.ok(b);assert.ok(Math.abs(b.width*w-220)<10);assert.ok(Math.abs(b.height*h-150)<10);
 });
+
+test('rough inches remain approximate and never manufacturing-ready',()=>{const S=require('./scan');const r=S.record({diameter:15.5,projection:9,unit:'in',outlineReviewed:true,confirmed:false,approximate:true});assert.equal(r.fixture.diameterMm,393.7);assert.equal(r.fixture.projectionMm,228.6);assert.equal(r.measurementSource,'user-entered-approximate');assert.equal(r.manufacturingReady,false);});

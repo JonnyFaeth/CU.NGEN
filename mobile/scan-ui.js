@@ -30,11 +30,11 @@ function library(){
 
 function validate(){
 
- let result;try{result=CUScan.record({diameter:el('scanDiameter').value,projection:el('scanProjection').value,unit:el('scanUnit').value,outlineReviewed:el('scanManual').checked||(!!box&&el('scanOutlineOK').checked),confirmed:el('scanConfirmed').checked,box:el('scanManual').checked?null:box});}catch(e){el('scanValidation').textContent=e.message;el('scanSave').disabled=true;el('scanSummary').textContent='';window.dispatchEvent(new CustomEvent('cu-ceiling-capture',{detail:null}));return null;}
+ let result;try{result=CUScan.record({diameter:el('scanDiameter').value,projection:el('scanProjection').value,unit:el('scanUnit').value,outlineReviewed:el('scanManual').checked||(!!box&&el('scanOutlineOK').checked),approximate:el('scanPlanning').checked,confirmed:el('scanConfirmed').checked,box:el('scanManual').checked?null:box});}catch(e){el('scanValidation').textContent=e.message;el('scanSave').disabled=true;el('scanSummary').textContent='';window.dispatchEvent(new CustomEvent('cu-ceiling-capture',{detail:null}));return null;}
 
  el('scanSave').disabled=false;el('scanValidation').textContent='Measurements ready to save. Ceiling fabrication remains unvalidated.';
 
- el('scanSummary').textContent=`Fixture envelope: Ø ${result.fixture.diameterMm} mm × ${result.fixture.projectionMm} mm below ceiling. Four walls + one bottom panel; open top.`;window.dispatchEvent(new CustomEvent('cu-ceiling-capture',{detail:result}));return result;
+ el('scanSummary').textContent=`${result.measurementSource==='user-entered-approximate'?'APPROXIMATE PLANNING ONLY. ':''}Fixture envelope: Ø ${result.fixture.diameterMm} mm × ${result.fixture.projectionMm} mm below ceiling. Four walls + one bottom panel; open top.`;window.dispatchEvent(new CustomEvent('cu-ceiling-capture',{detail:result}));return result;
 
 }
 
@@ -98,7 +98,7 @@ canvas.onclick=e=>{if(!marking||!picture)return;const r=canvas.getBoundingClient
 
 for(const id of ['scanDiameter','scanProjection','scanUnit'])el(id).oninput=()=>{el('scanConfirmed').checked=false;validate();};
 
-for(const id of ['scanOutlineOK','scanManual','scanConfirmed'])el(id).onchange=validate;
+for(const id of ['scanOutlineOK','scanManual','scanConfirmed','scanPlanning'])el(id).onchange=validate;
 
 el('scanSave').onclick=()=>{const data=validate();if(!data)return;const url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='cu-ceiling-measurements.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),5000);};
 

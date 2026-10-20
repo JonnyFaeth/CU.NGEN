@@ -1,0 +1,140 @@
+{
+  "measurementSource": "user-entered-approximate",
+  "units": "mm",
+  "exampleOnly": false,
+  "manufacturingReady": false,
+  "fixture": {
+    "diameter": 393.7,
+    "projection": 228.6,
+    "clearance": 25,
+    "bottomClearance": 25,
+    "thickness": 3,
+    "fit": 0.15,
+    "style": "horizontal",
+    "sheetWidth": 604.8248,
+    "sheetHeight": 604.8248
+  },
+  "panels": [
+    {
+      "id": "A",
+      "name": "Front",
+      "quantity": 1,
+      "width": 473.7,
+      "height": 256.6,
+      "thickness": 3,
+      "paper": {
+        "id": "paper-A",
+        "quantity": 1,
+        "width": 423.7,
+        "height": 233.6,
+        "bondingMargin": 6
+      }
+    },
+    {
+      "id": "B",
+      "name": "Back",
+      "quantity": 1,
+      "width": 473.7,
+      "height": 256.6,
+      "thickness": 3,
+      "paper": {
+        "id": "paper-B",
+        "quantity": 1,
+        "width": 423.7,
+        "height": 233.6,
+        "bondingMargin": 6
+      }
+    },
+    {
+      "id": "C",
+      "name": "Left",
+      "quantity": 1,
+      "width": 449.7,
+      "height": 256.6,
+      "thickness": 3,
+      "paper": {
+        "id": "paper-C",
+        "quantity": 1,
+        "width": 423.7,
+        "height": 233.6,
+        "bondingMargin": 6
+      }
+    },
+    {
+      "id": "D",
+      "name": "Right",
+      "quantity": 1,
+      "width": 449.7,
+      "height": 256.6,
+      "thickness": 3,
+      "paper": {
+        "id": "paper-D",
+        "quantity": 1,
+        "width": 423.7,
+        "height": 233.6,
+        "bondingMargin": 6
+      }
+    },
+    {
+      "id": "E",
+      "name": "Bottom",
+      "quantity": 1,
+      "width": 473.7,
+      "height": 473.7,
+      "thickness": 3,
+      "paper": {
+        "id": "paper-E",
+        "quantity": 1,
+        "width": 423.7,
+        "height": 423.7,
+        "bondingMargin": 6
+      }
+    }
+  ],
+  "stock": {
+    "woodSheets": 3,
+    "usableSheetWidth": 604.8248,
+    "usableSheetHeight": 604.8248,
+    "paperRolls": 1,
+    "paperRollWidth": 939.8,
+    "paperRollLength": 3581.4
+  },
+  "coupon": "Separate test pieces; stock and cutting unquoted",
+  "quote": {
+    "lines": [
+      {
+        "key": "wood",
+        "label": "Wood stock sheets",
+        "quantity": 3,
+        "unitPrice": 9.99,
+        "total": 29.97
+      },
+      {
+        "key": "paper",
+        "label": "Kozo paper rolls",
+        "quantity": 1,
+        "unitPrice": 39.99,
+        "total": 39.99
+      }
+    ],
+    "knownTotal": 76.96,
+    "cuFee": 7,
+    "unknown": [
+      "Stock trimming to machine size",
+      "Wood adhesive",
+      "Paper adhesive",
+      "Ceiling attachment",
+      "CNC setup, cutting and fit coupon",
+      "Packaging",
+      "Handling",
+      "shipping",
+      "tax"
+    ],
+    "firm": false,
+    "orderable": false,
+    "stockOption": "square",
+    "woodListingStatus": "MakerStock B/BB nominal 3 mm candidate; verify actual thickness, grade, stock and delivered price; entered unit prices may override references",
+    "priceDate": "2026-10-20"
+  },
+  "mountingStatus": "unresolved"
+}
