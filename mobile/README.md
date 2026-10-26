@@ -1,3 +1,7 @@
+# Version 0.9 — Stray Scanner import (experimental)
+
+An original browser adapter reads Stray 1.4-format depth/confidence PNGs, per-frame odometry calibration and original RGB video dimensions. Seven guided points produce a planning diameter and ceiling projection. All processing remains local. This is single-frame assisted measurement, not an embedded native scanner, automatic fixture segmentation or validated metrology. See [integration and validation](../projects/cu-lamps/STRAY-SCANNER.md).
+
 # Version 0.6 — five-panel prototype generator
 
 Confirmed ceiling measurements now feed five CNC laser panels with complementary tabs/slots, three patterns, an assembled preview, stock layouts and an incomplete parts estimate. Download a ZIP with five millimeter SVGs, nested sheet SVGs, paper layout, fit coupon, JSON and HTML assembly guide. No router reliefs or G-code. Supplier kerf compensation and physical coupon fitting remain required.

@@ -8,6 +8,7 @@ const el=id=>document.getElementById(id),canvas=el('scanCanvas'),ctx=canvas.getC
 
 for(const mode of ['Ceiling','Tabletop'])el('mode'+mode).onclick=()=>{const ceiling=mode==='Ceiling';el('ceilingCapture').hidden=!ceiling;for(const id of ['capture','collection','kit','tabletopChoose','tabletopKit'])el(id).hidden=ceiling;el('modeCeiling').setAttribute('aria-pressed',ceiling);el('modeTabletop').setAttribute('aria-pressed',!ceiling);document.querySelector('nav a').href=ceiling?'#ceilingCapture':'#capture';document.querySelector('.hero .button').href=ceiling?'#ceilingCapture':'#capture';};
 
+let scanEvidence=null;
 let picture=null,box=null,candidates=[],candidateIndex=0,marking=false,marks=[],generation=0,cvReady=null;
 
 function library(){
@@ -32,6 +33,7 @@ function validate(){
 
  let result;try{result=CUScan.record({diameter:el('scanDiameter').value,projection:el('scanProjection').value,unit:el('scanUnit').value,outlineReviewed:el('scanManual').checked||(!!box&&el('scanOutlineOK').checked),approximate:el('scanPlanning').checked,confirmed:el('scanConfirmed').checked,box:el('scanManual').checked?null:box});}catch(e){el('scanValidation').textContent=e.message;el('scanSave').disabled=true;el('scanSummary').textContent='';window.dispatchEvent(new CustomEvent('cu-ceiling-capture',{detail:null}));return null;}
 
+ if(scanEvidence)result.scanEvidence={...scanEvidence};
  el('scanSave').disabled=false;el('scanValidation').textContent='Measurements ready to save. Ceiling fabrication remains unvalidated.';
 
  el('scanSummary').textContent=`${result.measurementSource==='user-entered-approximate'?'APPROXIMATE PLANNING ONLY. ':''}Fixture envelope: Ø ${result.fixture.diameterMm} mm × ${result.fixture.projectionMm} mm below ceiling. Four walls + one bottom panel; open top.`;window.dispatchEvent(new CustomEvent('cu-ceiling-capture',{detail:result}));return result;
@@ -72,7 +74,7 @@ async function suggest(){
 
 }
 
-function resetPhoto(){generation++;picture=null;box=null;candidates=[];marks=[];marking=false;el('scanAdjust').hidden=true;canvas.classList.remove('loaded');el('scanOutlineOK').checked=false;el('scanOutlineOK').disabled=true;for(const id of ['scanSuggest','scanNext','scanMark'])el(id).disabled=true;el('scanConfirmed').checked=false;paint();validate();}
+function resetPhoto(){scanEvidence=null;generation++;picture=null;box=null;candidates=[];marks=[];marking=false;el('scanAdjust').hidden=true;canvas.classList.remove('loaded');el('scanOutlineOK').checked=false;el('scanOutlineOK').disabled=true;for(const id of ['scanSuggest','scanNext','scanMark'])el(id).disabled=true;el('scanConfirmed').checked=false;paint();validate();}
 
 for(const id of ['scanCamera','scanPhoto'])el(id).onchange=e=>{
 
@@ -96,7 +98,7 @@ el('scanMark').onclick=()=>{marking=true;marks=[];invalidate();el('scanStatus').
 
 canvas.onclick=e=>{if(!marking||!picture)return;const r=canvas.getBoundingClientRect();marks.push([Math.max(0,Math.min(1,(e.clientX-r.left)/r.width)),Math.max(0,Math.min(1,(e.clientY-r.top)/r.height))]);paint();if(marks.length===2){const [a,b]=marks;marks=[];marking=false;if(Math.abs(a[0]-b[0])<.02||Math.abs(a[1]-b[1])<.02){el('scanStatus').textContent='Corners too close. Try marking again.';return;}setBox({x:Math.min(a[0],b[0]),y:Math.min(a[1],b[1]),width:Math.abs(a[0]-b[0]),height:Math.abs(a[1]-b[1]),source:'user-marked'});el('scanStatus').textContent='Manual outline set. Review it and enter your measurements.';}};
 
-for(const id of ['scanDiameter','scanProjection','scanUnit'])el(id).oninput=()=>{el('scanConfirmed').checked=false;validate();};
+for(const id of ['scanDiameter','scanProjection','scanUnit'])el(id).oninput=()=>{scanEvidence=null;el('scanConfirmed').checked=false;validate();};
 
 for(const id of ['scanOutlineOK','scanManual','scanConfirmed','scanPlanning'])el(id).onchange=validate;
 
@@ -104,6 +106,13 @@ el('scanSave').onclick=()=>{const data=validate();if(!data)return;const url=URL.
 
 el('scanReset').onclick=()=>{resetPhoto();for(const id of ['scanDiameter','scanProjection'])el(id).value='';el('scanManual').checked=false;el('scanStatus').textContent='Capture cleared. Choose a photo or use manual measurements.';validate();};
 
+window.addEventListener('cu-stray-estimate',e=>{
+ const r=e.detail;if(!r||r.method!=='stray-single-frame-seven-point-v1'||!Number.isFinite(r.diameterMm)||!Number.isFinite(r.projectionMm))return;
+ resetPhoto();scanEvidence={method:r.method,frame:r.frame,ceilingResidualMm:r.ceilingResidualMm,accuracyValidated:false};
+ el('scanUnit').value='mm';el('scanDiameter').value=r.diameterMm;el('scanProjection').value=r.projectionMm;
+ el('scanManual').checked=true;el('scanPlanning').checked=true;el('scanConfirmed').checked=false;
+ el('scanStatus').textContent='Dimensions supplied by Stray depth scan; no photo outline is used.';validate();
+});
 validate();
 
 })();

@@ -12,7 +12,7 @@ function review(capture,design,quote,fixture={},exampleOnly=false){
  if(!fixture.wattage?.trim())reasons.push('CU review: confirm heat, clearances and enclosure suitability.');
  reasons.push('CU must verify the attachment, access for service and enclosure suitability.','Cut a fit coupon and physically validate the prototype.','Confirm fabrication, packing, delivery and lead time before accepting payment.');
  for(const item of quote.unknown)reasons.push('Obtain a price for '+item+'.');
- return {schema:'cu-kit-review',version:1,status:'draft-review-request',orderPlaced:false,paymentEnabled:false,manufacturingReady:false,exampleOnly,measurementSource:capture?.measurementSource||'synthetic-example',fixture:{shape:fixture.shape||'unknown',bulb:fixture.bulb||'unknown',model:String(fixture.model||'').slice(0,200),wattage:String(fixture.wattage||'').slice(0,80)},design,quote,openItems:reasons};
+ return {schema:'cu-kit-review',version:1,status:'draft-review-request',orderPlaced:false,paymentEnabled:false,manufacturingReady:false,exampleOnly,scanEvidence:capture?.scanEvidence||null,measurementSource:capture?.measurementSource||'synthetic-example',fixture:{shape:fixture.shape||'unknown',bulb:fixture.bulb||'unknown',model:String(fixture.model||'').slice(0,200),wattage:String(fixture.wattage||'').slice(0,80)},design,quote,openItems:reasons};
 }
 function project(capture,design,costs,fixture,exampleOnly){return {schema:'cu-saved-project',version:1,capture:JSON.parse(JSON.stringify(capture)),input:design.input,costs:{...costs},fixture:{...fixture},exampleOnly:!!exampleOnly};}
 function restore(P,raw){

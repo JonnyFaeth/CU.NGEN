@@ -60,3 +60,9 @@ test('customer chooses, saves, restores and prepares the same design for review'
  assert.ok(h.el('ceilingRequestStatus').textContent.includes('not an order'));
  h.el('panelThickness').value='0';h.el('panelThickness').input();assert.equal(h.el('prepareCeilingReview').onclick,null);
 });
+test('scan evidence survives design download, saved project and review request',async()=>{
+ const h=harness(),evidence={method:'stray-single-frame-seven-point-v1',frame:'000001',ceilingResidualMm:1,accuracyValidated:false};
+ h.events['cu-ceiling-capture']({detail:{measurementSource:'user-entered-approximate',scanEvidence:evidence,fixture:{diameterMm:400,projectionMm:230}}});
+ h.el('saveCeiling').onclick();h.el('restoreCeiling').onclick();const files=await exported(h);assert.deepEqual(JSON.parse(files['design.json']).scanEvidence,evidence);
+ h.el('prepareCeilingReview').onclick();const bytes=Buffer.from(await h.downloads.at(-1).blob.arrayBuffer());assert.ok(bytes.includes(Buffer.from('stray-single-frame-seven-point-v1')));assert.ok(bytes.includes(Buffer.from('user-entered-approximate')));
+});

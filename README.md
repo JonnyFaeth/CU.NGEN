@@ -6,7 +6,7 @@ CU.NGEN is CU's public workspace for designing affordable, reproducible systems 
 
 [Ceiling mounting and supplier research](projects/cu-lamps/MOUNTING-AND-SOURCING.md) · [Sample fabrication quote package](procurement/ceiling-sample/README.md). Prepared for supplier review; no final kit price or approved ceiling mount yet.
 
-**Current phone source 0.8:** [mobile app and CU quote-flow source](mobile/README.md). Includes assisted ceiling capture, three generated design choices, saved projects, quote-review exports, an expandable cost breakdown and a 10% CU fee. Payment and fulfillment are not launched; kit specifications are saved locally, not submitted as orders.
+**Current phone source 0.9:** [mobile app and CU quote-flow source](mobile/README.md). Includes experimental [Stray Scanner LiDAR import](projects/cu-lamps/STRAY-SCANNER.md), assisted ceiling capture, three generated design choices, saved projects, quote-review exports, an expandable cost breakdown and a 10% CU fee. Payment and fulfillment are not launched; kit specifications are saved locally, not submitted as orders.
 
 [October 25 scan-to-kit validation review](simulations/REVIEW-2026-10-25.md): measurement benchmark, independent panel audits, stock-price comparisons and customer workflow tests. [Corrected supplier DXF/PDF package](procurement/ceiling-sample-compatible/README.md).
 
