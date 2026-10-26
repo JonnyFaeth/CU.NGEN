@@ -1,0 +1,24 @@
+name: Scan-to-kit validation
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Run engine and customer workflow tests
+        run: node --test mobile/journey.test.cjs mobile/panel-export.test.cjs mobile/panels.test.cjs mobile/scan.test.cjs mobile/mobile.test.cjs app/engine.test.cjs scripts/material_plan.test.cjs simulations/validation.test.cjs
+      - name: Run deterministic benchmark
+        run: node simulations/benchmark.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: scan-to-kit-results
+          path: simulations/benchmark-results/

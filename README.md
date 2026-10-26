@@ -6,9 +6,11 @@ CU.NGEN is CU's public workspace for designing affordable, reproducible systems 
 
 [Ceiling mounting and supplier research](projects/cu-lamps/MOUNTING-AND-SOURCING.md) · [Sample fabrication quote package](procurement/ceiling-sample/README.md). Prepared for supplier review; no final kit price or approved ceiling mount yet.
 
-**Phone edition 0.6:** [mobile app and CU quote-flow source](mobile/README.md). Includes camera/library capture, perspective-reference measurement, three generated design choices, an expandable cost breakdown and a 10% CU fee. Payment and fulfillment are not launched; kit specifications are saved locally, not submitted as orders.
+**Current phone source 0.8:** [mobile app and CU quote-flow source](mobile/README.md). Includes assisted ceiling capture, three generated design choices, saved projects, quote-review exports, an expandable cost breakdown and a 10% CU fee. Payment and fulfillment are not launched; kit specifications are saved locally, not submitted as orders.
 
-[Hosted phone review](https://cu-ngen-lantern.jbon3.chatgpt.site) (owner-private; sign-in required). [Mobile download](https://github.com/JonnyFaeth/CU.NGEN/releases/tag/mobile-v0.6.0). On iPhone, use the hosted link in Safari and Share → Add to Home Screen. Direct ZIP/HTML opening is not the iPhone installation path.
+[October 25 scan-to-kit validation review](simulations/REVIEW-2026-10-25.md): measurement benchmark, independent panel audits, stock-price comparisons and customer workflow tests. [Corrected supplier DXF/PDF package](procurement/ceiling-sample-compatible/README.md).
+
+[Hosted phone review](https://cu-ngen-lantern.jbon3.chatgpt.site) (owner-private; sign-in required). [Older 0.6 mobile download](https://github.com/JonnyFaeth/CU.NGEN/releases/tag/mobile-v0.6.0). On iPhone, use the hosted link in Safari and Share → Add to Home Screen. Direct ZIP/HTML opening is not the iPhone installation path.
 
 [Download the latest Lantern Studio release](https://github.com/JonnyFaeth/CU.NGEN/releases/tag/lantern-v0.2.0) or open [app/index.html](app/index.html) locally after downloading the repository. No installation, account or API key is needed. [App guide](app/README.md).
 

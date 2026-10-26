@@ -1,0 +1,4469 @@
+{
+  "schema": "cu-validation-benchmark",
+  "version": 1,
+  "referencePriceDate": "2026-10-20",
+  "limitations": [
+    "Synthetic images are not real-world scan accuracy evidence.",
+    "No automatic metric reconstruction or model training is performed.",
+    "User fixture dimensions are approximate, not ground truth.",
+    "No physical fit, mounting, thermal, load or longevity certification.",
+    "Reference prices are not refreshed supplier quotes.",
+    "Customer workflow runs real handlers in a DOM test harness, not an iPhone browser."
+  ],
+  "sourceHashes": {
+    "panels": "db769d1979bf152db8fe3ab8c266360d6c1ecd4eb11af39af731d7d3384779eb",
+    "scan": "1197b8106b78eab967d61b1e1377350d59ce945e4400b26288d73e426476e2e2",
+    "journey": "e5eb0545bc91c81c748a349242d8dde0e9a138d550ad782ce65c647a3bcd5f79",
+    "panels-ui": "8faf0be63c2d052da535d8a48fb5f9e4895c1d84f36054f8c84b8ba6aeef409c",
+    "measurement": "4e6dbd6538b5b840544f6c27b69562141ecc59ac65119bad0dfad66c5db7e651"
+  },
+  "designs": [
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 40,
+        "thickness": 2,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 40,
+        "thickness": 2,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 40,
+        "thickness": 2,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 40,
+        "thickness": 3,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 40,
+        "thickness": 3,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 40,
+        "thickness": 3,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 40,
+        "thickness": 3.175,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 40,
+        "thickness": 3.175,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 40,
+        "thickness": 3.175,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 40,
+        "thickness": 6,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Enclosure is too small for the panel borders and joints. Increase spacing."
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 40,
+        "thickness": 6,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Enclosure is too small for the panel borders and joints. Increase spacing."
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 40,
+        "thickness": 6,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Enclosure is too small for the panel borders and joints. Increase spacing."
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 100,
+        "thickness": 2,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 100,
+        "thickness": 2,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 100,
+        "thickness": 2,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 100,
+        "thickness": 3,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 100,
+        "thickness": 3,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 100,
+        "thickness": 3,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 100,
+        "thickness": 3.175,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 100,
+        "thickness": 3.175,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 100,
+        "thickness": 3.175,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 100,
+        "thickness": 6,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 100,
+        "thickness": 6,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 100,
+        "thickness": 6,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 228.6,
+        "thickness": 2,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 228.6,
+        "thickness": 2,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 228.6,
+        "thickness": 2,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 228.6,
+        "thickness": 3,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 228.6,
+        "thickness": 3,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 228.6,
+        "thickness": 3,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 228.6,
+        "thickness": 3.175,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 228.6,
+        "thickness": 3.175,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 228.6,
+        "thickness": 3.175,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 228.6,
+        "thickness": 6,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 228.6,
+        "thickness": 6,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 228.6,
+        "thickness": 6,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 400,
+        "thickness": 2,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 400,
+        "thickness": 2,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 400,
+        "thickness": 2,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 400,
+        "thickness": 3,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 400,
+        "thickness": 3,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 400,
+        "thickness": 3,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 400,
+        "thickness": 3.175,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 400,
+        "thickness": 3.175,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 400,
+        "thickness": 3.175,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 400,
+        "thickness": 6,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 400,
+        "thickness": 6,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 80,
+        "projection": 400,
+        "thickness": 6,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 40,
+        "thickness": 2,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 40,
+        "thickness": 2,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 40,
+        "thickness": 2,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 40,
+        "thickness": 3,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 40,
+        "thickness": 3,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 40,
+        "thickness": 3,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 40,
+        "thickness": 3.175,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 40,
+        "thickness": 3.175,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 40,
+        "thickness": 3.175,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 40,
+        "thickness": 6,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Enclosure is too small for the panel borders and joints. Increase spacing."
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 40,
+        "thickness": 6,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Enclosure is too small for the panel borders and joints. Increase spacing."
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 40,
+        "thickness": 6,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Enclosure is too small for the panel borders and joints. Increase spacing."
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 100,
+        "thickness": 2,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 100,
+        "thickness": 2,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 100,
+        "thickness": 2,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 100,
+        "thickness": 3,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 100,
+        "thickness": 3,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 100,
+        "thickness": 3,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 100,
+        "thickness": 3.175,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 100,
+        "thickness": 3.175,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 100,
+        "thickness": 3.175,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 100,
+        "thickness": 6,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 100,
+        "thickness": 6,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 100,
+        "thickness": 6,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 228.6,
+        "thickness": 2,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 228.6,
+        "thickness": 2,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 228.6,
+        "thickness": 2,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 228.6,
+        "thickness": 3,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 228.6,
+        "thickness": 3,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 228.6,
+        "thickness": 3,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 228.6,
+        "thickness": 3.175,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 228.6,
+        "thickness": 3.175,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 228.6,
+        "thickness": 3.175,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 228.6,
+        "thickness": 6,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 228.6,
+        "thickness": 6,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 228.6,
+        "thickness": 6,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 400,
+        "thickness": 2,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 400,
+        "thickness": 2,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 400,
+        "thickness": 2,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 400,
+        "thickness": 3,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 400,
+        "thickness": 3,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 400,
+        "thickness": 3,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 400,
+        "thickness": 3.175,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 400,
+        "thickness": 3.175,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 400,
+        "thickness": 3.175,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 400,
+        "thickness": 6,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 400,
+        "thickness": 6,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 150,
+        "projection": 400,
+        "thickness": 6,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 40,
+        "thickness": 2,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 40,
+        "thickness": 2,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 40,
+        "thickness": 2,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 40,
+        "thickness": 3,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 40,
+        "thickness": 3,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 40,
+        "thickness": 3,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 40,
+        "thickness": 3.175,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 40,
+        "thickness": 3.175,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 40,
+        "thickness": 3.175,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 40,
+        "thickness": 6,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Enclosure is too small for the panel borders and joints. Increase spacing."
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 40,
+        "thickness": 6,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Enclosure is too small for the panel borders and joints. Increase spacing."
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 40,
+        "thickness": 6,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Enclosure is too small for the panel borders and joints. Increase spacing."
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 100,
+        "thickness": 2,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 100,
+        "thickness": 2,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 100,
+        "thickness": 2,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 100,
+        "thickness": 3,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 100,
+        "thickness": 3,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 100,
+        "thickness": 3,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 100,
+        "thickness": 3.175,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 100,
+        "thickness": 3.175,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 100,
+        "thickness": 3.175,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 100,
+        "thickness": 6,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 100,
+        "thickness": 6,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 100,
+        "thickness": 6,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 228.6,
+        "thickness": 2,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 228.6,
+        "thickness": 2,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 228.6,
+        "thickness": 2,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 228.6,
+        "thickness": 3,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 228.6,
+        "thickness": 3,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 228.6,
+        "thickness": 3,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 228.6,
+        "thickness": 3.175,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 228.6,
+        "thickness": 3.175,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 228.6,
+        "thickness": 3.175,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 228.6,
+        "thickness": 6,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 228.6,
+        "thickness": 6,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 228.6,
+        "thickness": 6,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 400,
+        "thickness": 2,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 400,
+        "thickness": 2,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 400,
+        "thickness": 2,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 400,
+        "thickness": 3,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 400,
+        "thickness": 3,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 400,
+        "thickness": 3,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 400,
+        "thickness": 3.175,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 400,
+        "thickness": 3.175,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 400,
+        "thickness": 3.175,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 400,
+        "thickness": 6,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 400,
+        "thickness": 6,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 250,
+        "projection": 400,
+        "thickness": 6,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 40,
+        "thickness": 2,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 40,
+        "thickness": 2,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 40,
+        "thickness": 2,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 40,
+        "thickness": 3,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 40,
+        "thickness": 3,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 40,
+        "thickness": 3,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 40,
+        "thickness": 3.175,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 40,
+        "thickness": 3.175,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 40,
+        "thickness": 3.175,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 40,
+        "thickness": 6,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Enclosure is too small for the panel borders and joints. Increase spacing."
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 40,
+        "thickness": 6,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Enclosure is too small for the panel borders and joints. Increase spacing."
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 40,
+        "thickness": 6,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Enclosure is too small for the panel borders and joints. Increase spacing."
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 100,
+        "thickness": 2,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 100,
+        "thickness": 2,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 100,
+        "thickness": 2,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 100,
+        "thickness": 3,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 100,
+        "thickness": 3,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 100,
+        "thickness": 3,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 100,
+        "thickness": 3.175,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 100,
+        "thickness": 3.175,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 100,
+        "thickness": 3.175,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 100,
+        "thickness": 6,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 100,
+        "thickness": 6,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 100,
+        "thickness": 6,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 228.6,
+        "thickness": 2,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 228.6,
+        "thickness": 2,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 228.6,
+        "thickness": 2,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 228.6,
+        "thickness": 3,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 228.6,
+        "thickness": 3,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 228.6,
+        "thickness": 3,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 228.6,
+        "thickness": 3.175,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 228.6,
+        "thickness": 3.175,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 228.6,
+        "thickness": 3.175,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 228.6,
+        "thickness": 6,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 228.6,
+        "thickness": 6,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 228.6,
+        "thickness": 6,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 400,
+        "thickness": 2,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 400,
+        "thickness": 2,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 400,
+        "thickness": 2,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 400,
+        "thickness": 3,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 400,
+        "thickness": 3,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 400,
+        "thickness": 3,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 400,
+        "thickness": 3.175,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 400,
+        "thickness": 3.175,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 400,
+        "thickness": 3.175,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 400,
+        "thickness": 6,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 400,
+        "thickness": 6,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 393.7,
+        "projection": 400,
+        "thickness": 6,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 40,
+        "thickness": 2,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 40,
+        "thickness": 2,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 40,
+        "thickness": 2,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 40,
+        "thickness": 3,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 40,
+        "thickness": 3,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 40,
+        "thickness": 3,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 40,
+        "thickness": 3.175,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 40,
+        "thickness": 3.175,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 40,
+        "thickness": 3.175,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 40,
+        "thickness": 6,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Enclosure is too small for the panel borders and joints. Increase spacing."
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 40,
+        "thickness": 6,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Enclosure is too small for the panel borders and joints. Increase spacing."
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 40,
+        "thickness": 6,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Enclosure is too small for the panel borders and joints. Increase spacing."
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 100,
+        "thickness": 2,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 100,
+        "thickness": 2,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 100,
+        "thickness": 2,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 100,
+        "thickness": 3,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 100,
+        "thickness": 3,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 100,
+        "thickness": 3,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 100,
+        "thickness": 3.175,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 100,
+        "thickness": 3.175,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 100,
+        "thickness": 3.175,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 100,
+        "thickness": 6,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 100,
+        "thickness": 6,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 100,
+        "thickness": 6,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 228.6,
+        "thickness": 2,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 228.6,
+        "thickness": 2,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 228.6,
+        "thickness": 2,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 228.6,
+        "thickness": 3,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 228.6,
+        "thickness": 3,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 228.6,
+        "thickness": 3,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 228.6,
+        "thickness": 3.175,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 228.6,
+        "thickness": 3.175,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 228.6,
+        "thickness": 3.175,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 228.6,
+        "thickness": 6,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 228.6,
+        "thickness": 6,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 228.6,
+        "thickness": 6,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 400,
+        "thickness": 2,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 400,
+        "thickness": 2,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 400,
+        "thickness": 2,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 400,
+        "thickness": 3,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 400,
+        "thickness": 3,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 400,
+        "thickness": 3,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 400,
+        "thickness": 3.175,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 400,
+        "thickness": 3.175,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 400,
+        "thickness": 3.175,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 400,
+        "thickness": 6,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 400,
+        "thickness": 6,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 500,
+        "projection": 400,
+        "thickness": 6,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 40,
+        "thickness": 2,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 40,
+        "thickness": 2,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 40,
+        "thickness": 2,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 40,
+        "thickness": 3,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 40,
+        "thickness": 3,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 40,
+        "thickness": 3,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 40,
+        "thickness": 3.175,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 40,
+        "thickness": 3.175,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 40,
+        "thickness": 3.175,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Panels are too short for this rib pattern. Use Plain or increase bottom spacing."
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 40,
+        "thickness": 6,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Enclosure is too small for the panel borders and joints. Increase spacing."
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 40,
+        "thickness": 6,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Enclosure is too small for the panel borders and joints. Increase spacing."
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 40,
+        "thickness": 6,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "rejected",
+      "reason": "Enclosure is too small for the panel borders and joints. Increase spacing."
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 100,
+        "thickness": 2,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 100,
+        "thickness": 2,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 100,
+        "thickness": 2,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 100,
+        "thickness": 3,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 100,
+        "thickness": 3,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 100,
+        "thickness": 3,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 100,
+        "thickness": 3.175,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 100,
+        "thickness": 3.175,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 100,
+        "thickness": 3.175,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 100,
+        "thickness": 6,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 100,
+        "thickness": 6,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 100,
+        "thickness": 6,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 228.6,
+        "thickness": 2,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 228.6,
+        "thickness": 2,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 228.6,
+        "thickness": 2,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 228.6,
+        "thickness": 3,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 228.6,
+        "thickness": 3,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 228.6,
+        "thickness": 3,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 228.6,
+        "thickness": 3.175,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 228.6,
+        "thickness": 3.175,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 228.6,
+        "thickness": 3.175,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 228.6,
+        "thickness": 6,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 228.6,
+        "thickness": 6,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 228.6,
+        "thickness": 6,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 400,
+        "thickness": 2,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 400,
+        "thickness": 2,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 400,
+        "thickness": 2,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 400,
+        "thickness": 3,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 400,
+        "thickness": 3,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 400,
+        "thickness": 3,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 400,
+        "thickness": 3.175,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 400,
+        "thickness": 3.175,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 400,
+        "thickness": 3.175,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 400,
+        "thickness": 6,
+        "style": "plain",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 400,
+        "thickness": 6,
+        "style": "horizontal",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "input": {
+        "diameter": 650,
+        "projection": 400,
+        "thickness": 6,
+        "style": "stepped",
+        "sheetWidth": 1000,
+        "sheetHeight": 1500
+      },
+      "status": "generated",
+      "pass": true,
+      "failures": []
+    }
+  ],
+  "measurement": {
+    "fixture": {
+      "diameterMm": 393.7,
+      "projectionMm": 228.6,
+      "source": "user approximate; no accuracy claim"
+    },
+    "sensitivity": [
+      {
+        "inputErrorMm": -20,
+        "outerWidthMm": 453.7,
+        "outerHeightMm": 236.6,
+        "remainingSideSpaceAgainstReferenceMm": 15,
+        "remainingBottomSpaceAgainstReferenceMm": 5
+      },
+      {
+        "inputErrorMm": -10,
+        "outerWidthMm": 463.7,
+        "outerHeightMm": 246.6,
+        "remainingSideSpaceAgainstReferenceMm": 20,
+        "remainingBottomSpaceAgainstReferenceMm": 15
+      },
+      {
+        "inputErrorMm": 0,
+        "outerWidthMm": 473.7,
+        "outerHeightMm": 256.6,
+        "remainingSideSpaceAgainstReferenceMm": 25,
+        "remainingBottomSpaceAgainstReferenceMm": 25
+      },
+      {
+        "inputErrorMm": 10,
+        "outerWidthMm": 483.7,
+        "outerHeightMm": 266.6,
+        "remainingSideSpaceAgainstReferenceMm": 30,
+        "remainingBottomSpaceAgainstReferenceMm": 35.00000000000003
+      },
+      {
+        "inputErrorMm": 20,
+        "outerWidthMm": 493.7,
+        "outerHeightMm": 276.6,
+        "remainingSideSpaceAgainstReferenceMm": 35,
+        "remainingBottomSpaceAgainstReferenceMm": 45.00000000000003
+      }
+    ]
+  },
+  "planarMeasurement": [
+    {
+      "truth": {
+        "width": 60,
+        "height": 140
+      },
+      "perspective": 0,
+      "noisePx": 0,
+      "measured": {
+        "width": 60,
+        "height": 140
+      },
+      "maxAbsoluteErrorMm": 0,
+      "pass": true
+    },
+    {
+      "truth": {
+        "width": 60,
+        "height": 140
+      },
+      "perspective": 0,
+      "noisePx": 1,
+      "measured": {
+        "width": 60.6,
+        "height": 141.8
+      },
+      "maxAbsoluteErrorMm": 1.8000000000000114,
+      "pass": null
+    },
+    {
+      "truth": {
+        "width": 60,
+        "height": 140
+      },
+      "perspective": 0,
+      "noisePx": 3,
+      "measured": {
+        "width": 61.5,
+        "height": 145.7
+      },
+      "maxAbsoluteErrorMm": 5.699999999999989,
+      "pass": null
+    },
+    {
+      "truth": {
+        "width": 60,
+        "height": 140
+      },
+      "perspective": 0.001,
+      "noisePx": 0,
+      "measured": {
+        "width": 60,
+        "height": 140
+      },
+      "maxAbsoluteErrorMm": 0,
+      "pass": true
+    },
+    {
+      "truth": {
+        "width": 60,
+        "height": 140
+      },
+      "perspective": 0.001,
+      "noisePx": 1,
+      "measured": {
+        "width": 59.3,
+        "height": 141.3
+      },
+      "maxAbsoluteErrorMm": 1.3000000000000114,
+      "pass": null
+    },
+    {
+      "truth": {
+        "width": 60,
+        "height": 140
+      },
+      "perspective": 0.001,
+      "noisePx": 3,
+      "measured": {
+        "width": 57.4,
+        "height": 144
+      },
+      "maxAbsoluteErrorMm": 4,
+      "pass": null
+    },
+    {
+      "truth": {
+        "width": 80,
+        "height": 140
+      },
+      "perspective": 0,
+      "noisePx": 0,
+      "measured": {
+        "width": 80,
+        "height": 140
+      },
+      "maxAbsoluteErrorMm": 0,
+      "pass": true
+    },
+    {
+      "truth": {
+        "width": 80,
+        "height": 140
+      },
+      "perspective": 0,
+      "noisePx": 1,
+      "measured": {
+        "width": 81.6,
+        "height": 142.1
+      },
+      "maxAbsoluteErrorMm": 2.0999999999999943,
+      "pass": null
+    },
+    {
+      "truth": {
+        "width": 80,
+        "height": 140
+      },
+      "perspective": 0,
+      "noisePx": 3,
+      "measured": {
+        "width": 84.9,
+        "height": 147
+      },
+      "maxAbsoluteErrorMm": 7,
+      "pass": null
+    },
+    {
+      "truth": {
+        "width": 80,
+        "height": 140
+      },
+      "perspective": 0.001,
+      "noisePx": 0,
+      "measured": {
+        "width": 80,
+        "height": 140
+      },
+      "maxAbsoluteErrorMm": 0,
+      "pass": true
+    },
+    {
+      "truth": {
+        "width": 80,
+        "height": 140
+      },
+      "perspective": 0.001,
+      "noisePx": 1,
+      "measured": {
+        "width": 80.4,
+        "height": 141.7
+      },
+      "maxAbsoluteErrorMm": 1.6999999999999886,
+      "pass": null
+    },
+    {
+      "truth": {
+        "width": 80,
+        "height": 140
+      },
+      "perspective": 0.001,
+      "noisePx": 3,
+      "measured": {
+        "width": 80.7,
+        "height": 145.5
+      },
+      "maxAbsoluteErrorMm": 5.5,
+      "pass": null
+    },
+    {
+      "truth": {
+        "width": 120,
+        "height": 140
+      },
+      "perspective": 0,
+      "noisePx": 0,
+      "measured": {
+        "width": 120,
+        "height": 140
+      },
+      "maxAbsoluteErrorMm": 0,
+      "pass": true
+    },
+    {
+      "truth": {
+        "width": 120,
+        "height": 140
+      },
+      "perspective": 0,
+      "noisePx": 1,
+      "measured": {
+        "width": 124.2,
+        "height": 142.9
+      },
+      "maxAbsoluteErrorMm": 4.200000000000003,
+      "pass": null
+    },
+    {
+      "truth": {
+        "width": 120,
+        "height": 140
+      },
+      "perspective": 0,
+      "noisePx": 3,
+      "measured": {
+        "width": 132.9,
+        "height": 149.7
+      },
+      "maxAbsoluteErrorMm": 12.900000000000006,
+      "pass": null
+    },
+    {
+      "truth": {
+        "width": 120,
+        "height": 140
+      },
+      "perspective": 0.001,
+      "noisePx": 0,
+      "measured": {
+        "width": 120,
+        "height": 140
+      },
+      "maxAbsoluteErrorMm": 0,
+      "pass": true
+    },
+    {
+      "truth": {
+        "width": 120,
+        "height": 140
+      },
+      "perspective": 0.001,
+      "noisePx": 1,
+      "measured": {
+        "width": 123,
+        "height": 142.6
+      },
+      "maxAbsoluteErrorMm": 3,
+      "pass": null
+    },
+    {
+      "truth": {
+        "width": 120,
+        "height": 140
+      },
+      "perspective": 0.001,
+      "noisePx": 3,
+      "measured": {
+        "width": 128.9,
+        "height": 148.5
+      },
+      "maxAbsoluteErrorMm": 8.900000000000006,
+      "pass": null
+    }
+  ],
+  "costs": [
+    {
+      "projectionMm": 100,
+      "style": "plain",
+      "stock": "square",
+      "sheets": 2,
+      "paperRolls": 1,
+      "panelCutMeters": 14.751,
+      "knownSubtotalUSD": 65.97,
+      "feeUSD": 6,
+      "unknown": [
+        "Stock trimming to machine size",
+        "Wood adhesive",
+        "Paper adhesive",
+        "Ceiling attachment",
+        "CNC setup, cutting and fit coupon",
+        "Packaging",
+        "Handling",
+        "shipping",
+        "tax"
+      ],
+      "firm": false,
+      "orderable": false,
+      "geometryAudit": {
+        "pass": true,
+        "failures": []
+      }
+    },
+    {
+      "projectionMm": 100,
+      "style": "plain",
+      "stock": "long",
+      "sheets": 1,
+      "paperRolls": 1,
+      "panelCutMeters": 14.751,
+      "knownSubtotalUSD": 79.18,
+      "feeUSD": 7.2,
+      "unknown": [
+        "Stock trimming to machine size",
+        "Wood adhesive",
+        "Paper adhesive",
+        "Ceiling attachment",
+        "CNC setup, cutting and fit coupon",
+        "Packaging",
+        "Handling",
+        "shipping",
+        "tax"
+      ],
+      "firm": false,
+      "orderable": false,
+      "geometryAudit": {
+        "pass": true,
+        "failures": []
+      }
+    },
+    {
+      "projectionMm": 100,
+      "style": "horizontal",
+      "stock": "square",
+      "sheets": 2,
+      "paperRolls": 1,
+      "panelCutMeters": 27.669,
+      "knownSubtotalUSD": 65.97,
+      "feeUSD": 6,
+      "unknown": [
+        "Stock trimming to machine size",
+        "Wood adhesive",
+        "Paper adhesive",
+        "Ceiling attachment",
+        "CNC setup, cutting and fit coupon",
+        "Packaging",
+        "Handling",
+        "shipping",
+        "tax"
+      ],
+      "firm": false,
+      "orderable": false,
+      "geometryAudit": {
+        "pass": true,
+        "failures": []
+      }
+    },
+    {
+      "projectionMm": 100,
+      "style": "horizontal",
+      "stock": "long",
+      "sheets": 1,
+      "paperRolls": 1,
+      "panelCutMeters": 27.669,
+      "knownSubtotalUSD": 79.18,
+      "feeUSD": 7.2,
+      "unknown": [
+        "Stock trimming to machine size",
+        "Wood adhesive",
+        "Paper adhesive",
+        "Ceiling attachment",
+        "CNC setup, cutting and fit coupon",
+        "Packaging",
+        "Handling",
+        "shipping",
+        "tax"
+      ],
+      "firm": false,
+      "orderable": false,
+      "geometryAudit": {
+        "pass": true,
+        "failures": []
+      }
+    },
+    {
+      "projectionMm": 100,
+      "style": "stepped",
+      "stock": "square",
+      "sheets": 2,
+      "paperRolls": 1,
+      "panelCutMeters": 23.927,
+      "knownSubtotalUSD": 65.97,
+      "feeUSD": 6,
+      "unknown": [
+        "Stock trimming to machine size",
+        "Wood adhesive",
+        "Paper adhesive",
+        "Ceiling attachment",
+        "CNC setup, cutting and fit coupon",
+        "Packaging",
+        "Handling",
+        "shipping",
+        "tax"
+      ],
+      "firm": false,
+      "orderable": false,
+      "geometryAudit": {
+        "pass": true,
+        "failures": []
+      }
+    },
+    {
+      "projectionMm": 100,
+      "style": "stepped",
+      "stock": "long",
+      "sheets": 1,
+      "paperRolls": 1,
+      "panelCutMeters": 23.927,
+      "knownSubtotalUSD": 79.18,
+      "feeUSD": 7.2,
+      "unknown": [
+        "Stock trimming to machine size",
+        "Wood adhesive",
+        "Paper adhesive",
+        "Ceiling attachment",
+        "CNC setup, cutting and fit coupon",
+        "Packaging",
+        "Handling",
+        "shipping",
+        "tax"
+      ],
+      "firm": false,
+      "orderable": false,
+      "geometryAudit": {
+        "pass": true,
+        "failures": []
+      }
+    },
+    {
+      "projectionMm": 228.6,
+      "style": "plain",
+      "stock": "square",
+      "sheets": 3,
+      "paperRolls": 1,
+      "panelCutMeters": 16.859,
+      "knownSubtotalUSD": 76.96,
+      "feeUSD": 7,
+      "unknown": [
+        "Stock trimming to machine size",
+        "Wood adhesive",
+        "Paper adhesive",
+        "Ceiling attachment",
+        "CNC setup, cutting and fit coupon",
+        "Packaging",
+        "Handling",
+        "shipping",
+        "tax"
+      ],
+      "firm": false,
+      "orderable": false,
+      "geometryAudit": {
+        "pass": true,
+        "failures": []
+      }
+    },
+    {
+      "projectionMm": 228.6,
+      "style": "plain",
+      "stock": "long",
+      "sheets": 2,
+      "paperRolls": 1,
+      "panelCutMeters": 16.859,
+      "knownSubtotalUSD": 114.37,
+      "feeUSD": 10.4,
+      "unknown": [
+        "Stock trimming to machine size",
+        "Wood adhesive",
+        "Paper adhesive",
+        "Ceiling attachment",
+        "CNC setup, cutting and fit coupon",
+        "Packaging",
+        "Handling",
+        "shipping",
+        "tax"
+      ],
+      "firm": false,
+      "orderable": false,
+      "geometryAudit": {
+        "pass": true,
+        "failures": []
+      }
+    },
+    {
+      "projectionMm": 228.6,
+      "style": "horizontal",
+      "stock": "square",
+      "sheets": 3,
+      "paperRolls": 1,
+      "panelCutMeters": 29.777,
+      "knownSubtotalUSD": 76.96,
+      "feeUSD": 7,
+      "unknown": [
+        "Stock trimming to machine size",
+        "Wood adhesive",
+        "Paper adhesive",
+        "Ceiling attachment",
+        "CNC setup, cutting and fit coupon",
+        "Packaging",
+        "Handling",
+        "shipping",
+        "tax"
+      ],
+      "firm": false,
+      "orderable": false,
+      "geometryAudit": {
+        "pass": true,
+        "failures": []
+      }
+    },
+    {
+      "projectionMm": 228.6,
+      "style": "horizontal",
+      "stock": "long",
+      "sheets": 2,
+      "paperRolls": 1,
+      "panelCutMeters": 29.777,
+      "knownSubtotalUSD": 114.37,
+      "feeUSD": 10.4,
+      "unknown": [
+        "Stock trimming to machine size",
+        "Wood adhesive",
+        "Paper adhesive",
+        "Ceiling attachment",
+        "CNC setup, cutting and fit coupon",
+        "Packaging",
+        "Handling",
+        "shipping",
+        "tax"
+      ],
+      "firm": false,
+      "orderable": false,
+      "geometryAudit": {
+        "pass": true,
+        "failures": []
+      }
+    },
+    {
+      "projectionMm": 228.6,
+      "style": "stepped",
+      "stock": "square",
+      "sheets": 3,
+      "paperRolls": 1,
+      "panelCutMeters": 26.036,
+      "knownSubtotalUSD": 76.96,
+      "feeUSD": 7,
+      "unknown": [
+        "Stock trimming to machine size",
+        "Wood adhesive",
+        "Paper adhesive",
+        "Ceiling attachment",
+        "CNC setup, cutting and fit coupon",
+        "Packaging",
+        "Handling",
+        "shipping",
+        "tax"
+      ],
+      "firm": false,
+      "orderable": false,
+      "geometryAudit": {
+        "pass": true,
+        "failures": []
+      }
+    },
+    {
+      "projectionMm": 228.6,
+      "style": "stepped",
+      "stock": "long",
+      "sheets": 2,
+      "paperRolls": 1,
+      "panelCutMeters": 26.036,
+      "knownSubtotalUSD": 114.37,
+      "feeUSD": 10.4,
+      "unknown": [
+        "Stock trimming to machine size",
+        "Wood adhesive",
+        "Paper adhesive",
+        "Ceiling attachment",
+        "CNC setup, cutting and fit coupon",
+        "Packaging",
+        "Handling",
+        "shipping",
+        "tax"
+      ],
+      "firm": false,
+      "orderable": false,
+      "geometryAudit": {
+        "pass": true,
+        "failures": []
+      }
+    }
+  ],
+  "outlines": [
+    {
+      "case": "blank",
+      "synthetic": true,
+      "candidates": 0,
+      "topIoU": null,
+      "expectation": "no candidates",
+      "pass": true
+    },
+    {
+      "case": "normal-1",
+      "synthetic": true,
+      "candidates": 2,
+      "topIoU": 0.991,
+      "expectation": "top IoU >= 0.85",
+      "pass": true
+    },
+    {
+      "case": "normal-0.7",
+      "synthetic": true,
+      "candidates": 2,
+      "topIoU": 0.9891,
+      "expectation": "top IoU >= 0.85",
+      "pass": true
+    },
+    {
+      "case": "normal-0.4",
+      "synthetic": true,
+      "candidates": 2,
+      "topIoU": 0.9843,
+      "expectation": "top IoU >= 0.85",
+      "pass": true
+    },
+    {
+      "case": "low-1",
+      "synthetic": true,
+      "candidates": 0,
+      "topIoU": null,
+      "expectation": "challenge; report only",
+      "pass": null
+    },
+    {
+      "case": "low-0.7",
+      "synthetic": true,
+      "candidates": 0,
+      "topIoU": null,
+      "expectation": "challenge; report only",
+      "pass": null
+    },
+    {
+      "case": "low-0.4",
+      "synthetic": true,
+      "candidates": 0,
+      "topIoU": null,
+      "expectation": "challenge; report only",
+      "pass": null
+    },
+    {
+      "case": "occluded-1",
+      "synthetic": true,
+      "candidates": 0,
+      "topIoU": null,
+      "expectation": "challenge; report only",
+      "pass": null
+    },
+    {
+      "case": "occluded-0.7",
+      "synthetic": true,
+      "candidates": 0,
+      "topIoU": null,
+      "expectation": "challenge; report only",
+      "pass": null
+    },
+    {
+      "case": "occluded-0.4",
+      "synthetic": true,
+      "candidates": 0,
+      "topIoU": null,
+      "expectation": "challenge; report only",
+      "pass": null
+    },
+    {
+      "case": "clutter-1",
+      "synthetic": true,
+      "candidates": 2,
+      "topIoU": 0.991,
+      "expectation": "challenge; report only",
+      "pass": null
+    },
+    {
+      "case": "clutter-0.7",
+      "synthetic": true,
+      "candidates": 2,
+      "topIoU": 0.9891,
+      "expectation": "challenge; report only",
+      "pass": null
+    },
+    {
+      "case": "clutter-0.4",
+      "synthetic": true,
+      "candidates": 2,
+      "topIoU": 0.9843,
+      "expectation": "challenge; report only",
+      "pass": null
+    },
+    {
+      "case": "clipped",
+      "synthetic": true,
+      "candidates": 0,
+      "topIoU": null,
+      "expectation": "challenge; report only",
+      "pass": null
+    }
+  ],
+  "captureChecks": [
+    {
+      "unit": "in",
+      "pass": true
+    },
+    {
+      "unit": "mm",
+      "pass": true
+    }
+  ],
+  "summary": {
+    "designCases": 288,
+    "generated": 234,
+    "rejected": 54,
+    "invalidGenerated": 0,
+    "outlineCases": 14,
+    "outlineRequiredFailures": 0,
+    "costComparisons": 12
+  }
+}

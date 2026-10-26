@@ -8,7 +8,9 @@ This preserves the original quote geometry: **100 mm synthetic fixture projectio
 
 The reproducible exporter is `scripts/build_supplier_repair.py`, requiring ezdxf 1.4.5, reportlab and pypdf. It checks every DXF segment against the frozen original design, reopens and audits each DXF, and checks PDF page dimensions and every vector coordinate. All seven PDF pages were rendered with Poppler and visually inspected. Supplier CAM compatibility remains unconfirmed.
 
-## Suggested supplier reply (not sent)
+## Supplier reply (sent October 25, 2026)
+
+Sent in the existing quote thread after explicit author approval. Pricing and import confirmation only; no paid work authorized.
 
 Hello Marshall,
 

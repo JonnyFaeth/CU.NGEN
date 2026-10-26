@@ -32,6 +32,25 @@ test('sample exports retain sample label; custom prices and stock propagate to g
  h.el('pc-wood').value='12.34';h.el('pc-wood').input();files=await exported(h);assert.equal(JSON.parse(files['design.json']).quote.lines.find(l=>l.key==='wood').unitPrice,12.34);assert.ok(files['assembly-guide.html'].includes('$24.68'));
 });
 module.exports={harness,exported};
+
+for(const style of ['plain','horizontal','stepped'])for(const stock of ['square','long'])for(const projection of [100,228.6]){
+ test(`complete quote journey: ${style}, ${stock}, projection ${projection}`,async()=>{
+  const h=harness();h.events['cu-ceiling-capture']({detail:{measurementSource:'user-entered-approximate',fixture:{diameterMm:393.7,projectionMm:projection}}});
+  h.el('choose-'+style).onclick();h.el('panelStock').value=stock;h.el('panelStock').change();
+  h.el('panelClearance').value='30';h.el('panelClearance').input();
+  h.el('saveCeiling').onclick();h.el('panelClearance').value='40';h.el('panelClearance').input();h.el('restoreCeiling').onclick();
+  const files=await exported(h),d=JSON.parse(files['design.json']),parts=JSON.parse(files['parts-list.json']);
+  assert.equal(d.input.style,style);assert.equal(d.input.clearance,30);assert.equal(d.input.projection,projection);assert.equal(d.quote.stockOption,stock);
+  assert.deepEqual(require('../simulations/design-audit.cjs').audit(d),{pass:true,failures:[]});
+  assert.deepEqual(parts.quote,d.quote);assert.equal(parts.stock.woodSheets,d.sheets.length);
+  for(const p of d.panels){assert.equal(files[`panel-${p.id}-${p.name.toLowerCase()}.svg`],P.svg(p));const item=parts.panels.find(a=>a.id===p.id);assert.equal(item.width,p.width);assert.equal(item.height,p.height);assert.equal(item.paper.width,p.paper.width);assert.equal(item.paper.height,p.paper.height);}
+  assert.ok(files['assembly-guide.html'].includes('$'+d.quote.knownTotal.toFixed(2)));
+  for(const unknown of d.quote.unknown)assert.ok(files['assembly-guide.html'].includes(unknown));
+  h.el('prepareCeilingReview').onclick();assert.equal(h.downloads.at(-1).name,'CU-design-review.zip');
+  const request=Buffer.from(await h.downloads.at(-1).blob.arrayBuffer());assert.ok(request.includes(Buffer.from('draft-review-request')));assert.ok(request.includes(Buffer.from('No paid work authorized')));
+  assert.equal(d.quote.orderable,false);assert.equal(d.manufacturingReady,false);
+ });
+}
 test('customer chooses, saves, restores and prepares the same design for review',async()=>{
  const h=harness();h.events['cu-ceiling-capture']({detail:{measurementSource:'user-entered-approximate',fixture:{diameterMm:393.7,projectionMm:228.6}}});
  h.el('choose-stepped').onclick();assert.equal(h.el('panelStyle').value,'stepped');h.el('saveCeiling').onclick();
