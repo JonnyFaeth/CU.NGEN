@@ -28,7 +28,7 @@ final class BrowserController: UIViewController, WKScriptMessageHandler, WKNavig
         else { decisionHandler(.cancel) }
     }
     func emit(_ name: String, _ detail: [String: Any]) {
-        web.callAsyncJavaScript("window.dispatchEvent(new CustomEvent(name,{detail:payload}));", arguments: ["name":name,"payload":detail], in: nil, contentWorld: .page, completionHandler: nil)
+        web.callAsyncJavaScript("window.dispatchEvent(new CustomEvent(name,{detail:payload}));", arguments: ["name":name,"payload":detail], in: nil, in: .page, completionHandler: nil)
     }
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         guard message.frameInfo.isMainFrame, message.frameInfo.request.url?.isFileURL == true,

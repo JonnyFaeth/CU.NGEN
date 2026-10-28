@@ -52,3 +52,7 @@ Contributions and discussions should be respectful, specific, and evidence-based
 Latest evaluation: [capture comparison](simulations/COMPARISON.md). Automatic 3D measurement remains unresolved; kit exports now require user-confirmed dimensions. [Synthetic example package](simulations/example-kit/kit.html).
 
 New in 0.5: [assisted ceiling capture](simulations/CEILING-CAPTURE.md) with local OpenCV rim suggestions, editable outline, mm/inch entry and confirmed-dimension export. [Scanning projects evaluated](projects/cu-lamps/SCANNING-RESEARCH.md). Version 0.6 adds [five-panel CNC laser geometry and parts estimates](projects/cu-lamps/PANEL-GENERATOR.md); physical fit and mounting remain unverified.
+
+
+### Integrated iPhone capture (0.11 prototype)
+Native ARKit capture now feeds CU’s guided measurement and design workflow directly, without a separate scanner app. [Native build and device validation instructions](ios/README.md). iPhone signing and real-device accuracy validation remain outstanding; the hosted web app cannot access LiDAR.
