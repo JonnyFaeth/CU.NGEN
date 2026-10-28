@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: '24'
       - name: Run engine and customer workflow tests
-        run: node --test mobile/journey.test.cjs mobile/panel-export.test.cjs mobile/panels.test.cjs mobile/scan.test.cjs mobile/stray.test.cjs mobile/mobile.test.cjs app/engine.test.cjs scripts/material_plan.test.cjs simulations/validation.test.cjs
+        run: node --test mobile/journey.test.cjs mobile/panel-export.test.cjs mobile/panels.test.cjs mobile/scan.test.cjs mobile/stray.test.cjs mobile/scan-archive.test.cjs mobile/mobile.test.cjs app/engine.test.cjs scripts/material_plan.test.cjs simulations/validation.test.cjs
       - name: Run deterministic benchmark
         run: node simulations/benchmark.cjs
       - uses: actions/upload-artifact@v4

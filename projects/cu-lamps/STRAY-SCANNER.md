@@ -40,3 +40,13 @@ No claim of improved real-world accuracy is made until paired device/reference m
 ## Validation performed for this change
 
 67 automated tests passed, including actual UI-handler tests for scan import, applying dimensions, invalidating stale selections and preserving evidence through saved projects and export. PNG tests exercise all five PNG row filters without losing 16-bit depth. The deterministic design benchmark still reports 234 valid generated designs out of 288 cases, with 54 deliberately unsupported cases rejected. Desktop browser review confirms controls render and missing files produce a useful error. These checks do not replace a real iPhone capture; no device accuracy or full real-file browser import is claimed.
+
+## Version 0.10 — ZIP review workflow
+
+A single local ZIP supplies video, calibration and numbered depth/confidence pairs. The bounded reader supports stored/deflated entries, validates checksums/sizes, rejects unsafe/duplicate names, encrypted/split archives and multiple recordings. Limits: 300 MB archive, 600 MB declared expansion, 15,000 entries. Files are decoded on demand; no filesystem extraction or server upload occurs in the app.
+
+Up to 24 evenly spaced frames are scored by high-confidence valid depth coverage (35% whole view, 65% central half). This does not detect the fixture or prove completeness. Photo previews use the upstream 60 fps export convention. Frames beyond video duration are excluded. Seek/display alignment remains subject to device review; do not select points when features do not match.
+
+Guided point selection remains necessary. A skipped stem no longer discards an independently usable diameter. One reading per frame is retained; two distinct frames are required per scan-derived dimension. Provisional agreement requires spread <= max(10 mm, 5% of maximum). The largest agreeing estimate is used. Views are not statistically independent and agreement cannot exclude systematic error. Missing/disagreeing dimensions receive separate manual inputs; provenance distinguishes manual-fallback from scan-comparison. All results remain planning-only.
+
+The owner-supplied ZIP was tested privately: 1,411 matched pairs, 24 sampled candidates decoded/calibrated, view 000980 ranking first by this heuristic. Desktop browser import, preview rendering, view switching and manual-fallback design generation were verified. Scan and screenshots remain ignored local files. Tests cover archive rejection, disagreement, dimension separation and actual UI handlers. Phone memory/performance, automatic segmentation and fabrication accuracy remain unverified.

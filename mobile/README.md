@@ -1,3 +1,7 @@
+# Version 0.10 — one ZIP, candidate views and dimensional fallback
+
+Import a Stray ZIP locally. CU samples up to 24 views, ranks depth coverage, displays corresponding photo/depth previews, compares manually selected measurements across frames, and asks only for dimensions lacking provisional agreement. This remains assisted point selection, not automatic fixture segmentation. Raw recordings are not persisted or uploaded.
+
 # Version 0.9 — Stray Scanner import (experimental)
 
 An original browser adapter reads Stray 1.4-format depth/confidence PNGs, per-frame odometry calibration and original RGB video dimensions. Seven guided points produce a planning diameter and ceiling projection. All processing remains local. This is single-frame assisted measurement, not an embedded native scanner, automatic fixture segmentation or validated metrology. See [integration and validation](../projects/cu-lamps/STRAY-SCANNER.md).

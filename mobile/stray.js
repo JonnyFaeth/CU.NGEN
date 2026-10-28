@@ -41,5 +41,18 @@ function measure(depth,confidence,k,marks){
  if(diameter<50||diameter>1200||projection<20||projection>600)fail('Estimated fixture is outside supported dimensions, or lowest point is behind the ceiling.');
  return {diameterMm:Math.round(diameter*10)/10,projectionMm:Math.round(projection*10)/10,ceilingResidualMm:Math.round(residual*10)/10,method:'stray-single-frame-seven-point-v1',accuracyValidated:false,manufacturingReady:false};
 }
-return {png,intrinsics,measure,crc};
+
+// Independent dimensions: a missing stem must not discard a usable rim measurement.
+function partial(depth,confidence,k,marks){
+ const out={diameterMm:null,projectionMm:null,issues:[],ceilingResidualMm:null};
+ if(!marks||marks.length!==7)throw Error('Complete or skip all seven points.');
+ function point(p){if(!p||p.length!==2||!p.every(Number.isInteger)||p[0]<0||p[0]>=256||p[1]<0||p[1]>=192)throw Error('Missing point.');const [x,y]=p,z=depth.values[y*256+x];if(confidence.values[y*256+x]!==2||!Number.isFinite(z)||z<200||z>5000)throw Error('Unreliable depth.');return [(x-k.cx)*z/k.fx,(y-k.cy)*z/k.fy,z];}
+ if(!k||![k.fx,k.fy,k.cx,k.cy].every(Number.isFinite)||k.fx<=0||k.fy<=0)throw Error('Invalid calibration.');
+ let plane;
+ try{const [a,b,c,check]=marks.slice(0,4).map(point),u=sub(b,a),v=sub(c,a);let n=cross(u,v);const size=length(n);if(length(u)<100||length(v)<100||size/(length(u)*length(v))<.15)throw Error('Spread ceiling points apart.');n=n.map(x=>x/size);if(dot(n,a)>0)n=n.map(x=>-x);const residual=Math.abs(dot(sub(check,a),n));if(residual>10)throw Error('Ceiling check exceeds 10 mm.');plane={a,n};out.ceilingResidualMm=residual;}catch(e){out.issues.push('Ceiling: '+e.message);}
+ try{const a=point(marks[4]),b=point(marks[5]),v=length(sub(a,b));if(plane&&Math.abs(dot(sub(a,b),plane.n))>15)throw Error('Rim heights disagree.');if(v<50||v>1200)throw Error('Outside supported size.');out.diameterMm=Math.round(v*10)/10;}catch(e){out.issues.push('Diameter: '+e.message);}
+ try{if(!plane)throw Error('A valid ceiling plane is needed.');const v=dot(sub(point(marks[6]),plane.a),plane.n);if(v<20||v>600)throw Error('Outside supported depth.');out.projectionMm=Math.round(v*10)/10;}catch(e){out.issues.push('Projection: '+e.message);}return out;
+}
+
+return {png,intrinsics,measure,partial,crc};
 });
