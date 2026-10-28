@@ -1,0 +1,21 @@
+name: Native iPhone compile
+on:
+  push:
+    paths: ['ios/**', 'mobile/**', 'app/**', 'scripts/build*', '.github/workflows/ios.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  simulator:
+    runs-on: macos-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/build_ios.py
+      - run: brew install xcodegen
+      - run: xcodegen generate --spec ios/project.yml
+      - run: xcodebuild -project ios/CULantern.xcodeproj -scheme CULantern -sdk iphonesimulator -configuration Debug -derivedDataPath ios/build CODE_SIGNING_ALLOWED=NO build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: CU-Lantern-unsigned-simulator-not-for-iPhone
+          path: ios/build/Build/Products/Debug-iphonesimulator/CULantern.app

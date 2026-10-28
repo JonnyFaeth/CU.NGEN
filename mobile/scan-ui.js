@@ -107,7 +107,7 @@ el('scanSave').onclick=()=>{const data=validate();if(!data)return;const url=URL.
 el('scanReset').onclick=()=>{resetPhoto();for(const id of ['scanDiameter','scanProjection'])el(id).value='';el('scanManual').checked=false;el('scanStatus').textContent='Capture cleared. Choose a photo or use manual measurements.';validate();};
 
 window.addEventListener('cu-stray-estimate',e=>{
- const r=e.detail;if(!r||!['stray-single-frame-seven-point-v1','stray-multiview-assisted-v2'].includes(r.method)||!Number.isFinite(r.diameterMm)||!Number.isFinite(r.projectionMm))return;
+ const r=e.detail;if(!r||!['stray-single-frame-seven-point-v1','stray-multiview-assisted-v2','cu-native-assisted-v1'].includes(r.method)||!Number.isFinite(r.diameterMm)||!Number.isFinite(r.projectionMm))return;
  resetPhoto();scanEvidence={method:r.method,frame:r.frame,ceilingResidualMm:r.ceilingResidualMm,dimensions:r.dimensions,comparison:r.comparison,accuracyValidated:false};
  el('scanUnit').value='mm';el('scanDiameter').value=r.diameterMm;el('scanProjection').value=r.projectionMm;
  el('scanManual').checked=true;el('scanPlanning').checked=true;el('scanConfirmed').checked=false;
