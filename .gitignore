@@ -25,3 +25,5 @@ dist/
 ios/Web/
 ios/*.xcodeproj/
 ios/build/
+
+ios/device-build/

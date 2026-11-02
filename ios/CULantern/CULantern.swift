@@ -2,6 +2,7 @@ import SwiftUI
 import WebKit
 import ARKit
 import AVFoundation
+import SafariServices
 
 @main struct CULanternApp: App {
     var body: some Scene { WindowGroup { CUWebView().ignoresSafeArea(edges: .bottom) } }
@@ -16,6 +17,10 @@ final class BrowserController: UIViewController, WKScriptMessageHandler, WKNavig
         super.viewDidLoad()
         let config = WKWebViewConfiguration()
         config.userContentController.add(self, name: "cuScanner")
+        config.userContentController.add(self, name: "cuFiles")
+        if let scriptURL = Bundle.main.url(forResource: "file-share", withExtension: "js"), let script = try? String(contentsOf: scriptURL, encoding: .utf8) {
+            config.userContentController.addUserScript(WKUserScript(source: script, injectionTime: .atDocumentStart, forMainFrameOnly: true))
+        }
         web = WKWebView(frame: .zero, configuration: config)
         web.navigationDelegate = self
         view = web
@@ -25,14 +30,23 @@ final class BrowserController: UIViewController, WKScriptMessageHandler, WKNavig
     func webView(_ webView: WKWebView, decidePolicyFor action: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         // Never expose the native bridge to a remote page.
         if let url = action.request.url, url.isFileURL, url.standardizedFileURL.path.hasPrefix(Bundle.main.bundleURL.path + "/") { decisionHandler(.allow) }
-        else { decisionHandler(.cancel) }
+        else {
+            decisionHandler(.cancel)
+            if action.navigationType == .linkActivated, let url = action.request.url,
+               url.scheme == "https", presentedViewController == nil {
+                present(SFSafariViewController(url: url), animated: true)
+            }
+        }
     }
     func emit(_ name: String, _ detail: [String: Any]) {
         web.callAsyncJavaScript("window.dispatchEvent(new CustomEvent(name,{detail:payload}));", arguments: ["name":name,"payload":detail], in: nil, in: .page, completionHandler: nil)
     }
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        guard message.frameInfo.isMainFrame, message.frameInfo.request.url?.isFileURL == true,
-              let body = message.body as? [String:String], body["action"] == "scan", presentedViewController == nil else { return }
+        guard message.frameInfo.isMainFrame, let origin = message.frameInfo.request.url,
+              origin.isFileURL, origin.standardizedFileURL.path.hasPrefix(Bundle.main.bundleURL.path + "/"),
+              let body = message.body as? [String:String] else { return }
+        if message.name == "cuFiles" { shareFile(body); return }
+        guard message.name == "cuScanner", body["action"] == "scan", presentedViewController == nil else { return }
         guard ARWorldTrackingConfiguration.supportsFrameSemantics(.sceneDepth) else {
             emit("cu-native-status", ["message":"This device has no supported LiDAR. Use photos or manual measurements below."]); return
         }
@@ -50,6 +64,32 @@ final class BrowserController: UIViewController, WKScriptMessageHandler, WKNavig
             self.present(scanner, animated: true)
         }}
     }
+    private func shareFile(_ body: [String:String]) {
+        guard presentedViewController == nil else { emit("cu-file-status", ["message":"Close the current screen and try exporting again."]); return }
+        guard let name = body["name"], name.range(of: #"^[A-Za-z0-9][A-Za-z0-9._ -]{0,119}\.(zip|json|svg|dxf|html|txt|csv|pdf)$"#, options: [.regularExpression, .caseInsensitive]) != nil,
+              let encoded = body["base64"], encoded.utf8.count <= 28_000_000,
+              let data = Data(base64Encoded: encoded), data.count <= 20 * 1024 * 1024 else {
+            emit("cu-file-status", ["message":"Export rejected: invalid filename or file size."]); return
+        }
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent("cu-export-" + UUID().uuidString, isDirectory: true)
+        do {
+            try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+            let file = directory.appendingPathComponent(name)
+            try data.write(to: file, options: [.atomic, .completeFileProtection])
+            let activity = UIActivityViewController(activityItems: [file], applicationActivities: nil)
+            activity.popoverPresentationController?.sourceView = view
+            activity.popoverPresentationController?.sourceRect = CGRect(x:view.bounds.midX,y:view.bounds.maxY-20,width:1,height:1)
+            activity.completionWithItemsHandler = { [weak self] _, completed, _, error in
+                try? FileManager.default.removeItem(at: directory)
+                self?.emit("cu-file-status", ["message": error != nil ? "Export failed. Please try again." : (completed ? "File exported. No order or payment was placed." : "Export cancelled. Nothing was sent by CU.")])
+            }
+            present(activity, animated: true)
+        } catch {
+            try? FileManager.default.removeItem(at: directory)
+            emit("cu-file-status", ["message":"Unable to prepare the file. Please try again."])
+        }
+    }
+
 }
 final class ScannerController: UIViewController, ARSessionDelegate {
     private let scene = ARSCNView()
@@ -58,6 +98,7 @@ final class ScannerController: UIViewController, ARSessionDelegate {
     private let done = UIButton(type: .system)
     private var frames: [[String:Any]] = []
     private var lastTime: TimeInterval = -1
+    private var capturePositions: [SIMD3<Float>] = []
     private let imageContext = CIContext()
     var finished: (([[String:Any]]) -> Void)?
     override func viewDidLoad() {
@@ -86,6 +127,10 @@ final class ScannerController: UIViewController, ARSessionDelegate {
     @objc private func take() {
         guard frames.count < 12, let frame = scene.session.currentFrame, case .normal = frame.camera.trackingState,
               frame.timestamp - lastTime > 0.5, let depth = frame.sceneDepth, let confidence = depth.confidenceMap else { label.text = "Wait for tracking, hold steady, then capture another view."; return }
+        let position = SIMD3<Float>(frame.camera.transform.columns.3.x, frame.camera.transform.columns.3.y, frame.camera.transform.columns.3.z)
+        if capturePositions.contains(where: { simd_distance($0, position) < 0.03 }) {
+            label.text = "Move sideways a little before capturing again. We need different viewpoints, not repeated pictures from the same position."; return
+        }
         let map = depth.depthMap
         guard CVPixelBufferGetWidth(map) == 256, CVPixelBufferGetHeight(map) == 192,
               CVPixelBufferGetWidth(confidence) == 256, CVPixelBufferGetHeight(confidence) == 192 else { label.text = "Unsupported depth resolution. Use manual measurements."; return }
@@ -106,6 +151,7 @@ final class ScannerController: UIViewController, ARSessionDelegate {
         frames.append(["frame":String(frames.count),"width":256,"height":192,"depthMm":values,"confidence":confidences,
                        "k":["fx":k.columns.0.x*sx,"fy":k.columns.1.y*sy,"cx":k.columns.2.x*sx,"cy":k.columns.2.y*sy],
                        "image":"data:image/jpeg;base64," + jpeg.base64EncodedString()])
+        capturePositions.append(position)
         lastTime = frame.timestamp
         label.text = "\(frames.count) views captured. Move sideways for the next view; keep the rim, stem and ceiling visible."
         done.isEnabled = frames.count >= 2; capture.isEnabled = frames.count < 12

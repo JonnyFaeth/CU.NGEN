@@ -15,6 +15,12 @@ jobs:
       - run: brew install xcodegen
       - run: xcodegen generate --spec ios/project.yml
       - run: xcodebuild -project ios/CULantern.xcodeproj -scheme CULantern -sdk iphonesimulator -configuration Debug -derivedDataPath ios/build CODE_SIGNING_ALLOWED=NO build
+      - name: Verify bundled export bridge and design engine
+        run: |
+          test -f ios/build/Build/Products/Debug-iphonesimulator/CULantern.app/file-share.js
+          test -f ios/build/Build/Products/Debug-iphonesimulator/CULantern.app/Web/panels.js
+      - name: Compile unsigned physical-device target
+        run: xcodebuild -project ios/CULantern.xcodeproj -scheme CULantern -sdk iphoneos -configuration Debug -derivedDataPath ios/device-build CODE_SIGNING_ALLOWED=NO build
       - uses: actions/upload-artifact@v4
         with:
           name: CU-Lantern-unsigned-simulator-not-for-iPhone
