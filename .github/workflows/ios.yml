@@ -1,7 +1,7 @@
 name: Native iPhone compile
 on:
   push:
-    paths: ['ios/**', 'mobile/**', 'app/**', 'scripts/build*', '.github/workflows/ios.yml']
+    paths: ['ios/**', 'mobile/**', 'app/**', 'scripts/build*', 'scripts/package_ios.py', '.github/workflows/ios.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -25,3 +25,12 @@ jobs:
         with:
           name: CU-Lantern-unsigned-simulator-not-for-iPhone
           path: ios/build/Build/Products/Debug-iphonesimulator/CULantern.app
+
+      - name: Package unsigned iPhone build for local signing
+        run: python3 scripts/package_ios.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: CU-Lantern-unsigned-iPhone-requires-signing
+          path: |
+            dist/*-unsigned.ipa
+            dist/*-unsigned.ipa.sha256

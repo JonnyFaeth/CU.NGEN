@@ -3,13 +3,13 @@
 CU now has a native iOS shell bundling the same web design engine. Tap Scan with CU camera, capture 2–12 views, then return directly to CU's guided measurement and design screen. No separate scanner app, ZIP export or upload is required. Captures stay in memory on the device and clear when the app closes or the user clears them.
 
 ## Build
-Requires macOS, Xcode and XcodeGen (MIT licensed build tooling):
+Building locally requires macOS, Xcode and XcodeGen (MIT licensed build tooling). GitHub Actions also builds and packages an unsigned device app; see the Windows testing route below:
 
     python3 scripts/build_ios.py
     xcodegen generate --spec ios/project.yml
     open ios/CULantern.xcodeproj
 
-Select your Apple development team and a unique bundle identifier in Xcode, connect the iPhone, and Run. No signing keys or team identifiers are committed. GitHub Actions compiles an **unsigned simulator build**, not an installable iPhone IPA. Signing and device installation remain outstanding; this Windows workspace cannot perform them. A native CU install is distinct from the Safari home-screen web app.
+Select your Apple development team and a unique bundle identifier in Xcode, connect the iPhone, and Run. No signing keys or team identifiers are committed. GitHub Actions compiles simulator and physical-device targets and packages an **unsigned iPhone IPA**. Signing and device installation remain outstanding; the IPA cannot be opened directly on an iPhone. A native CU install is distinct from the Safari home-screen web app.
 
 ## Capture contract and privacy
 Apple ARKit sceneDepth supplies depth and confidence; capturedImage and camera intrinsics come from the same ARFrame. Depth meters convert to integer millimeters, respecting pixel-buffer row strides. RGB is resized in the camera's unrotated coordinates to match the 256×192 depth map. Intrinsics scale from camera image resolution to the same grid. The browser bridge validates dimensions, calibration, sample ranges and unique frame IDs. No camera data is uploaded, persisted or published. Only bundled local pages receive the native bridge; remote navigation is blocked.
@@ -40,3 +40,16 @@ References: https://developer.apple.com/documentation/arkit/arframe/scenedepth a
 - Test native exports using a saved quote ZIP, compare it to the web-generated package, then test cancellation and a second export. Confirm external supplier sheets can be dismissed back into CU.
 
 The iPhone app is still unsigned for physical devices. No Apple account, subscription, paid hardware or vendor order was created.
+
+
+## Windows testing route (not yet tested with CU)
+
+An available route to investigate is AltServer / AltStore Classic on Windows, using a free Apple account for personal testing. This corrects the earlier implication that borrowing a Mac is the only route. The native code is built on GitHub's macOS runner; local signing/installation is separate.
+
+1. Download the `CU-Lantern-unsigned-iPhone-requires-signing` artifact from a successful Native iPhone compile run. Extract the IPA and its SHA-256 checksum. Do not use the simulator artifact.
+2. Follow the official Windows setup guide: https://faq.altstore.io/altstore-classic/how-to-install-altstore-windows . Follow current official prerequisites; never disable antivirus or other security protection to troubleshoot.
+3. You enter your own Apple account credentials into the signing tool, connect/unlock your iPhone, and handle trust/Developer Mode prompts. Never put credentials in chat or GitHub.
+4. AltServer documents a Windows Shift-click menu option to sideload an IPA: https://faq.altstore.io/release-notes/altserver . Select the unsigned CU IPA and let the tool perform signing. Installation compatibility is unverified until tested on your iPhone/iOS version.
+5. Free-account apps expire after seven days and require refreshing/reinstallation: https://faq.altstore.io/altstore-classic/your-altstore . This is a developer testing route, not our eventual customer installation experience.
+
+No signing software was installed or account permission changed automatically. If installation fails, preserve the error message without including credentials. The long-term customer distribution route remains unresolved.
